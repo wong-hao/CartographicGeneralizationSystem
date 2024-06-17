@@ -1,0 +1,457 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2182E797-9776-4280-8EE0-A6588AB53131}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BuildingGen</RootNamespace>
+    <AssemblyName>BuildingGen</AssemblyName>
+    <ApplicationIcon>Earth.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>6649E5D3BBA636DCDD11691FD5174B39BFD7719E</ManifestCertificateThumbprint>
+    <ManifestKeyFile>BuildingGen_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Domap-城市地图综合软件</ProductName>
+    <PublisherName>武汉大学</PublisherName>
+    <ApplicationRevision>47</ApplicationRevision>
+    <ApplicationVersion>1.0.0.47</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.ADF" />
+    <Reference Include="ESRI.ArcGIS.AxControls" />
+    <Reference Include="ESRI.ArcGIS.Carto" />
+    <Reference Include="ESRI.ArcGIS.Controls" />
+    <Reference Include="ESRI.ArcGIS.ConversionTools, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataManagementTools, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.Display" />
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.Geoprocessing, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.NetworkAnalysis, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System" />
+    <Reference Include="ESRI.ArcGIS.SystemUI" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddData.cs" />
+    <Compile Include="AddDataDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDataDlg.designer.cs">
+      <DependentUpon>AddDataDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnnoSelect.cs" />
+    <Compile Include="BookMark.cs" />
+    <Compile Include="BookMarkDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookMarkDlg.Designer.cs">
+      <DependentUpon>BookMarkDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BSGPDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BSGPDlg.Designer.cs">
+      <DependentUpon>BSGPDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuildCut.cs" />
+    <Compile Include="BuildingA.cs" />
+    <Compile Include="BuildingAdd.cs" />
+    <Compile Include="BuildingAggregateEx.cs" />
+    <Compile Include="BuildingAggregateGP.cs" />
+    <Compile Include="BuildingAggregation.cs" />
+    <Compile Include="BuildingB.cs" />
+    <Compile Include="BuildingC.cs" />
+    <Compile Include="BuildingCheck.cs" />
+    <Compile Include="BuildingE.cs" />
+    <Compile Include="BuildingGroupByRoad.cs" />
+    <Compile Include="BuildingSelect.cs" />
+    <Compile Include="CentralizeNarrowRiver.cs" />
+    <Compile Include="CircleSizeDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CircleSizeDlg.Designer.cs">
+      <DependentUpon>CircleSizeDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClearWorkspace.cs" />
+    <Compile Include="ConflictHandleOfRoadBuild.cs" />
+    <Compile Include="ConflictOfBuildingAndRoad.cs" />
+    <Compile Include="ConnectRoad.cs" />
+    <Compile Include="ConnectRoadEx.cs" />
+    <Compile Include="CutForDitches.cs" />
+    <Compile Include="CutRiverToPieces.cs" />
+    <Compile Include="DeletePoint.cs" />
+    <Compile Include="DitchAreaToLine.cs" />
+    <Compile Include="DitchesAutoSelectEx.cs" />
+    <Compile Include="DitchGroup.cs" />
+    <Compile Include="GetOriFeats.cs" />
+    <Compile Include="GetOriFeatsforRoad.cs" />
+    <Compile Include="GridSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridSize.Designer.cs">
+      <DependentUpon>GridSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GRoadGraph.cs" />
+    <Compile Include="GTrackCancel.cs" />
+    <Compile Include="GWorkSpaceInfoDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GWorkSpaceInfoDlg.Designer.cs">
+      <DependentUpon>GWorkSpaceInfoDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HydroConflict.cs" />
+    <Compile Include="lineNodeEdit.cs" />
+    <Compile Include="NodeEditor.cs" />
+    <Compile Include="NodeEditorEx.cs" />
+    <Compile Include="PlantBuffer.cs" />
+    <Compile Include="POISelection.cs" />
+    <Compile Include="Reshape.cs" />
+    <Compile Include="RoadCheck.cs" />
+    <Compile Include="BuildingD.cs" />
+    <Compile Include="BuildingRenderer.cs" />
+    <Compile Include="BuildingSimplify.cs" />
+    <Compile Include="BuildingSimplifyGP.cs" />
+    <Compile Include="CenterLineFactory.cs" />
+    <Compile Include="CityRender.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CityRender2.cs" />
+    <Compile Include="CreateNewDocument.cs" />
+    <Compile Include="CreateWorkspaceDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateWorkspaceDlg.Designer.cs">
+      <DependentUpon>CreateWorkspaceDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateWSDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateWSDlg.designer.cs">
+      <DependentUpon>CreateWSDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DictionaryPropertyGridAdapter.cs" />
+    <Compile Include="DocPropety.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocPropety.Designer.cs">
+      <DependentUpon>DocPropety.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditLayer.cs" />
+    <Compile Include="GAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GAbout.Designer.cs">
+      <DependentUpon>GAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GApplication.cs" />
+    <Compile Include="GBuffer.cs" />
+    <Compile Include="GBuilding.cs" />
+    <Compile Include="GConfig.cs" />
+    <Compile Include="GConvert.cs" />
+    <Compile Include="Generalizer.cs" />
+    <Compile Include="GenParaDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenParaDlg.Designer.cs">
+      <DependentUpon>GenParaDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GGenPara.cs" />
+    <Compile Include="GLayerInfoDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GLayerInfoDlg.Designer.cs">
+      <DependentUpon>GLayerInfoDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GLayerManager.cs" />
+    <Compile Include="GLine.cs" />
+    <Compile Include="GRenderer.cs" />
+    <Compile Include="GStroke.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenWSDlg2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenWSDlg2.designer.cs">
+      <DependentUpon>OpenWSDlg2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutlookBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Render.cs" />
+    <Compile Include="RenderDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenderDlg.designer.cs">
+      <DependentUpon>RenderDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoadAutoSelect.cs" />
+    <Compile Include="RoadCheckEx.cs" />
+    <Compile Include="RoadRank.cs" />
+    <Compile Include="RoadRankChange.cs" />
+    <Compile Include="RoadSelectEx.cs" />
+    <Compile Include="RoadSplit.cs" />
+    <Compile Include="RoadStroke.cs" />
+    <Compile Include="RoadTopoConnect.cs" />
+    <Compile Include="ScaleTools.cs" />
+    <Compile Include="SelectDitchByHands.cs" />
+    <Compile Include="SelectDitchs.cs" />
+    <Compile Include="SelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectForm.Designer.cs">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectPoolsByArea.cs" />
+    <Compile Include="SelectSomeDitches.cs" />
+    <Compile Include="ShowCircle.cs" />
+    <Compile Include="ShowGrid.cs" />
+    <Compile Include="SimplifyErrCheck.cs" />
+    <Compile Include="StreetBlock.cs" />
+    <Compile Include="StreetBlockConfigDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StreetBlockConfigDlg.Designer.cs">
+      <DependentUpon>StreetBlockConfigDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnionForSelectLongDitches.cs" />
+    <Compile Include="VegetationGeneralize.cs" />
+    <Compile Include="GRingSimplify.cs" />
+    <Compile Include="GTestCommand.cs" />
+    <Compile Include="GTocManager.cs" />
+    <Compile Include="IconGeter.cs" />
+    <Compile Include="BaseClass.cs" />
+    <Compile Include="GMapControlManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddDataDlg.resx">
+      <DependentUpon>AddDataDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookMarkDlg.resx">
+      <DependentUpon>BookMarkDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BSGPDlg.resx">
+      <DependentUpon>BSGPDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CircleSizeDlg.resx">
+      <DependentUpon>CircleSizeDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateWorkspaceDlg.resx">
+      <DependentUpon>CreateWorkspaceDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateWSDlg.resx">
+      <DependentUpon>CreateWSDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocPropety.resx">
+      <DependentUpon>DocPropety.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GAbout.resx">
+      <DependentUpon>GAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenParaDlg.resx">
+      <DependentUpon>GenParaDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridSize.resx">
+      <DependentUpon>GridSize.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GWorkSpaceInfoDlg.resx">
+      <DependentUpon>GWorkSpaceInfoDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenWSDlg2.resx">
+      <DependentUpon>OpenWSDlg2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenderDlg.resx">
+      <DependentUpon>RenderDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoadAreaDlg.resx">
+      <DependentUpon>RoadAreaDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectForm.resx">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleSymbolDlg.resx">
+      <DependentUpon>SimpleSymbolDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StreetBlockConfigDlg.resx">
+      <DependentUpon>StreetBlockConfigDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm.resx">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="BuildingGen_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="GWorkspace.cs" />
+    <Compile Include="RiverSimplify.cs" />
+    <Compile Include="RoadArea.cs" />
+    <Compile Include="RoadAreaDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoadAreaDlg.Designer.cs">
+      <DependentUpon>RoadAreaDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoadConnect.cs" />
+    <Compile Include="SaveEdit.cs" />
+    <Compile Include="SimpleSymbolDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimpleSymbolDlg.Designer.cs">
+      <DependentUpon>SimpleSymbolDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimplifyBuildingGenarator.cs" />
+    <Compile Include="StartEdit.cs" />
+    <Compile Include="StopEdit.cs" />
+    <Compile Include="Undo.cs" />
+    <Compile Include="WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm.Designer.cs">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaterAggre.cs" />
+    <Compile Include="WaterAggreforSelect.cs" />
+    <Compile Include="WaterB.cs" />
+    <Compile Include="WaterCheck.cs" />
+    <Compile Include="WaterD.cs" />
+    <Compile Include="WaterLineConnect.cs" />
+    <Compile Include="WaterLineHandle.cs" />
+    <Compile Include="VegetationGeneralizeEx.cs" />
+    <Compile Include="OpenDoc.cs" />
+    <Compile Include="WaterLineSplit.cs" />
+    <Compile Include="WaterSimplify.cs" />
+    <Compile Include="WaterSimplify2.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Content Include="Earth.ico" />
+    <Content Include="Generalizer.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GenPara.inf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="GENERALIZERLib">
+      <Guid>{BA22043A-68FD-4193-B88F-19222AE60D63}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

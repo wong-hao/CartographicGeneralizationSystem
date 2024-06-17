@@ -1,0 +1,16 @@
+D:\验收\code\DatabaseUpdate\bin\Release\DatabaseUpdate.dll
+D:\验收\code\DatabaseUpdate\bin\Release\DatabaseUpdate.pdb
+D:\验收\code\DatabaseUpdate\bin\Release\DatabaseUpdate.tlb
+D:\验收\code\DatabaseUpdate\obj\Release\ResolveAssemblyReference.cache
+D:\验收\code\DatabaseUpdate\obj\Release\DatabaseUpdate.SyncMapWindow.resources
+D:\验收\code\DatabaseUpdate\obj\Release\DatabaseUpdate.LayersTypePropertyPage.resources
+D:\验收\code\DatabaseUpdate\obj\Release\DatabaseUpdate.GenerateUpdateAreaWin.resources
+D:\验收\code\DatabaseUpdate\obj\Release\DatabaseUpdate.GenerateUpdateAreaWin2.resources
+D:\验收\code\DatabaseUpdate\obj\Release\DatabaseUpdate.SpatialDatabaseConnection.resources
+D:\验收\code\DatabaseUpdate\obj\Release\DatabaseUpdate.Versions.resources
+D:\验收\code\DatabaseUpdate\obj\Release\DatabaseUpdate.DoUpdate.resources
+D:\验收\code\DatabaseUpdate\obj\Release\DatabaseUpdate.csproj.GenerateResource.Cache
+D:\验收\code\DatabaseUpdate\obj\Release\DatabaseUpdate.dll
+D:\验收\code\DatabaseUpdate\obj\Release\DatabaseUpdate.pdb
+D:\验收\code\DatabaseUpdate\obj\Release\DatabaseUpdate.ConnectLocalDataDlg.resources
+D:\验收\code\DatabaseUpdate\obj\Release\DatabaseUpdate.OpenWSDlg2.resources

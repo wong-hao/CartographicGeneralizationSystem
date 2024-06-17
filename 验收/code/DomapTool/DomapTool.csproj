@@ -1,0 +1,394 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BC36A485-FCBA-4E28-9752-23B0AB7AE7D2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DomapTool</RootNamespace>
+    <AssemblyName>DomapTool</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.ADF, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcMapUI, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.Carto, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataManagementTools, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Editor, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Framework, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessing, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoSelectLines.cs" />
+    <Compile Include="Axis.cs" />
+    <Compile Include="BuildC.cs" />
+    <Compile Include="BuildingAlign.cs" />
+    <Compile Include="BuildingB.cs" />
+    <Compile Include="BuildingD.cs" />
+    <Compile Include="BuildingDDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuildingDDialog.Designer.cs">
+      <DependentUpon>BuildingDDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuildingSimplify.cs" />
+    <Compile Include="CenterLineFactory.cs" />
+    <Compile Include="ChangeStrokes.cs" />
+    <Compile Include="CheckOverlapForRoad.cs" />
+    <Compile Include="ConflictHandleOfBuildAndRoad.cs" />
+    <Compile Include="ConnectRoadWithSameName.cs" />
+    <Compile Include="DeleteMinHole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteMinHole.Designer.cs">
+      <DependentUpon>DeleteMinHole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DictionaryPropertyGridAdapter.cs" />
+    <Compile Include="DomapRegistry.cs" />
+    <Compile Include="DomapToolBar.cs" />
+    <Compile Include="DoUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoUpdate.designer.cs">
+      <DependentUpon>DoUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoWithQueryFilterDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoWithQueryFilterDlg.Designer.cs">
+      <DependentUpon>DoWithQueryFilterDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generalizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GenerateUpdateAreaWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerateUpdateAreaWin.designer.cs">
+      <DependentUpon>GenerateUpdateAreaWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateUpdateAreaWin2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerateUpdateAreaWin2.designer.cs">
+      <DependentUpon>GenerateUpdateAreaWin2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenPara.cs" />
+    <Compile Include="GenParaDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenParaDlg.Designer.cs">
+      <DependentUpon>GenParaDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayersPara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LayersPara.Designer.cs">
+      <DependentUpon>LayersPara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LineSimplify.cs" />
+    <Compile Include="LineSimplifyDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LineSimplifyDlg.Designer.cs">
+      <DependentUpon>LineSimplifyDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlantMinHole.cs" />
+    <Compile Include="POIForShortCommand.cs" />
+    <Compile Include="PolygonOverlapCheck.cs" />
+    <Compile Include="PoolsAdjoin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoadConnectConfigDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoadConnectConfigDlg.Designer.cs">
+      <DependentUpon>RoadConnectConfigDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoadConnectTool.cs" />
+    <Compile Include="RoadStrokeTool.cs" />
+    <Compile Include="SelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectForm.designer.cs">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POIForShortConfigDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POIForShortConfigDlg.Designer.cs">
+      <DependentUpon>POIForShortConfigDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowPara.cs" />
+    <Compile Include="UnionPolygon.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RoadConnectTool.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RoadConnectConfigDlg.resx">
+      <DependentUpon>RoadConnectConfigDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoadConnectTool.cur" />
+    <EmbeddedResource Include="SelectForm.resx">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CheckOverlapForRoad.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CheckOverlapForRoad.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="POIForShortConfigDlg.resx">
+      <DependentUpon>POIForShortConfigDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GenerateUpdateAreaWin2.resx">
+      <DependentUpon>GenerateUpdateAreaWin2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Axis.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RoadStrokeTool.bmp" />
+    <EmbeddedResource Include="RoadStrokeTool.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChangeStrokes.cur" />
+    <EmbeddedResource Include="ChangeStrokes.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PlantMinHole.cur" />
+    <EmbeddedResource Include="PlantMinHole.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GenerateUpdateAreaWin.resx">
+      <DependentUpon>GenerateUpdateAreaWin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POIForShortCommand.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PolygonOverlapCheck.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DeleteMinHole.resx">
+      <DependentUpon>DeleteMinHole.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoUpdate.resx">
+      <DependentUpon>DoUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayersPara.resx">
+      <DependentUpon>LayersPara.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PolygonOverlapCheck.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UnionPolygon.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UnionPolygon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BuildingD.cur" />
+    <EmbeddedResource Include="BuildingDDialog.resx">
+      <DependentUpon>BuildingDDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BuildingD.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BuildingB.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BuildingB.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BuildingSimplify.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BuildingSimplify.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BuildC.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BuildC.bmp" />
+    <EmbeddedResource Include="DoWithQueryFilterDlg.resx">
+      <DependentUpon>DoWithQueryFilterDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PoolsAdjoin.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PoolsAdjoin.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="GENERALIZERLib">
+      <Guid>{BA22043A-68FD-4193-B88F-19222AE60D63}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Generalizer.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GenPara.inf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AutoSelectLines.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AutoSelectLines.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GenParaDlg.resx">
+      <DependentUpon>GenParaDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LineSimplify.bmp" />
+    <EmbeddedResource Include="LineSimplifyDlg.resx">
+      <DependentUpon>LineSimplifyDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ShowPara.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ConnectRoadWithSameName.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ConflictHandleOfBuildAndRoad.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BuildingAlign.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

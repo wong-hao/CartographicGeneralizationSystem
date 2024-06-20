@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0EF28A60-A861-4CE3-9230-4266F165442F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SMGI.Plugin.CollaborativeWork</RootNamespace>
+    <AssemblyName>SMGI.Plugin.CollaborativeWork</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Release\Plugins\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Docking.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraWizard.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataManagementTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Editor, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.EngineCore, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Framework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoDatabaseUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessing, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GlobeCore, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>.\Mono.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>.\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CollaborativeTask\CollaborativeTask.cs" />
+    <Compile Include="CollaborativeTask\PropertyConflictProcessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CollaborativeTask\PropertyConflictProcessForm.Designer.cs">
+      <DependentUpon>PropertyConflictProcessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CollaborativeTask\SubmitAndDelHistoryVersionCommand.cs" />
+    <Compile Include="CollaborativeTask\SubmitCommand.cs" />
+    <Compile Include="CollaborativeTask\ConflictDetectionCommand.cs" />
+    <Compile Include="CollaborativeTask\ConflictResultTable.cs" />
+    <Compile Include="CollaborativeTask\FrmConflictResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CollaborativeTask\FrmConflictResult.Designer.cs">
+      <DependentUpon>FrmConflictResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CollaborativeTask\ShowConflictResultCommand.cs" />
+    <Compile Include="Common\commonMethod.cs" />
+    <Compile Include="Common\FeatureValidity.cs" />
+    <Compile Include="Common\RegistryHelper.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="工具\DCDUpdatedDataExportCmd.cs" />
+    <Compile Include="工具\DCDUpdatedDataExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具\DCDUpdatedDataExportForm.Designer.cs">
+      <DependentUpon>DCDUpdatedDataExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具\ExportDataBetweenVersionCmd.cs" />
+    <Compile Include="工具\ExportDataBetweenVersionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具\ExportDataBetweenVersionForm.designer.cs">
+      <DependentUpon>ExportDataBetweenVersionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具\ServerDBDeleteOneVersionCmd.cs" />
+    <Compile Include="工具\DownLoadDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具\DownLoadDataForm.Designer.cs">
+      <DependentUpon>DownLoadDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具\DownLoadDataCmd.cs" />
+    <Compile Include="工具\DataDetectionCommand.cs" />
+    <Compile Include="工具\DownLoadVersionDataCmd.cs" />
+    <Compile Include="工具\DownLoadVersionDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具\DownLoadVersionDataForm.Designer.cs">
+      <DependentUpon>DownLoadVersionDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具\FrmDataDetection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具\FrmDataDetection.Designer.cs">
+      <DependentUpon>FrmDataDetection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具\ModifyServerIPCommand.cs" />
+    <Compile Include="工具\ModifyServerIPForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具\ModifyServerIPForm.designer.cs">
+      <DependentUpon>ModifyServerIPForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具\ServerDBRollbackToVersionCmd.cs" />
+    <Compile Include="工具\ServerDBRestoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具\ServerDBRestoreForm.designer.cs">
+      <DependentUpon>ServerDBRestoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据库\DataBaseCommonMethod.cs" />
+    <Compile Include="数据库\LocalDataBase.cs" />
+    <Compile Include="数据库\SDEDataServer.cs" />
+    <Compile Include="工具\ExportDataCmd.cs" />
+    <Compile Include="工具\ExportDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具\ExportDataForm.Designer.cs">
+      <DependentUpon>ExportDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具\ExportUpatedDataCmd.cs" />
+    <Compile Include="工具\RotateTool.cs" />
+    <Compile Include="工具\frmInputField.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具\frmInputField.Designer.cs">
+      <DependentUpon>frmInputField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CollaborativeTask\FrmSubmit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CollaborativeTask\FrmSubmit.Designer.cs">
+      <DependentUpon>FrmSubmit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具\FrmMeasureResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具\FrmMeasureResult.Designer.cs">
+      <DependentUpon>FrmMeasureResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具\MeasureAreaTool.cs" />
+    <Compile Include="工具\SDECommonConnectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具\SDECommonConnectionForm.Designer.cs">
+      <DependentUpon>SDECommonConnectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具\ExportDataCommand.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="工具\ServerDataInitializeCommand.cs" />
+    <Compile Include="工具\DeleteFieldsCommand.cs" />
+    <Compile Include="CollaborativeTask\WorkspaceExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CollaborativeTask\FrmConflictResult.resx">
+      <DependentUpon>FrmConflictResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CollaborativeTask\FrmSubmit.resx">
+      <DependentUpon>FrmSubmit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CollaborativeTask\PropertyConflictProcessForm.resx">
+      <DependentUpon>PropertyConflictProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具\DCDUpdatedDataExportForm.resx">
+      <DependentUpon>DCDUpdatedDataExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具\DownLoadDataForm.resx">
+      <DependentUpon>DownLoadDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具\DownLoadVersionDataForm.resx">
+      <DependentUpon>DownLoadVersionDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具\ExportDataBetweenVersionForm.resx">
+      <DependentUpon>ExportDataBetweenVersionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具\ExportDataForm.resx">
+      <DependentUpon>ExportDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具\FrmDataDetection.resx">
+      <DependentUpon>FrmDataDetection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具\frmInputField.resx">
+      <DependentUpon>frmInputField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具\FrmMeasureResult.resx">
+      <DependentUpon>FrmMeasureResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具\ModifyServerIPForm.resx">
+      <DependentUpon>ModifyServerIPForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具\SDECommonConnectionForm.resx">
+      <DependentUpon>SDECommonConnectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具\ServerDBRestoreForm.resx">
+      <DependentUpon>ServerDBRestoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="pen.cur" />
+    <EmbeddedResource Include="修线.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Move.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SMGI.Common\SMGI.Common.csproj">
+      <Project>{6CF02365-2D92-427B-92DB-1C55DAEEB1BF}</Project>
+      <Name>SMGI.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\导出数据.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

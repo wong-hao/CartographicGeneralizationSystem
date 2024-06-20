@@ -1,0 +1,6 @@
+D:\ECarto\trunk\Release\bin\快速地图制图系统.exe
+D:\ECarto\trunk\Release\bin\快速地图制图系统.pdb
+D:\ECarto\trunk\code\ECartoEmergencyMap\obj\x86\Release\eCarto.Properties.Resources.resources
+D:\ECarto\trunk\code\ECartoEmergencyMap\obj\x86\Release\ECartoEmergencyMap.csproj.GenerateResource.Cache
+D:\ECarto\trunk\code\ECartoEmergencyMap\obj\x86\Release\快速地图制图系统.exe
+D:\ECarto\trunk\code\ECartoEmergencyMap\obj\x86\Release\快速地图制图系统.pdb

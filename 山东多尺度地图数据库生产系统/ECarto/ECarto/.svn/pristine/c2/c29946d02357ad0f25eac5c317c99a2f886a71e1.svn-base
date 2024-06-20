@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{59E84D60-35D7-4F6D-B64F-3228D22101DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SMGI.Plugin.ThematicChart</RootNamespace>
+    <AssemblyName>SMGI.Plugin.ThematicChart</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Release\Plugins\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRaster, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Editor, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Framework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoAnalyst, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GlobeCore, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SpatialAnalyst, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\Visual Studio Tools for Office\PIA\Office14\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChartAttrs\ColumnJson.cs" />
+    <Compile Include="ChartAttrs\FrmColumnAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartAttrs\FrmColumnAttribute.Designer.cs">
+      <DependentUpon>FrmColumnAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartAttrs\FrmColumnClAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartAttrs\FrmColumnClAttribute.Designer.cs">
+      <DependentUpon>FrmColumnClAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartAttrs\FrmPieAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartAttrs\FrmPieAttribute.Designer.cs">
+      <DependentUpon>FrmPieAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartAttrs\JsonHelper.cs" />
+    <Compile Include="ChartAttrs\PieAttrsCommand.cs" />
+    <Compile Include="ChartAttrs\PieAttrsIdentifyTool.cs" />
+    <Compile Include="ChartAttrs\PieJson.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Common\ChartsToRepHelper.cs" />
+    <Compile Include="Common\ColorHelper.cs" />
+    <Compile Include="Common\CommonMethods.cs" />
+    <Compile Include="Common\ExcelGenerator.cs" />
+    <Compile Include="Common\ExpertiseDatabase.cs" />
+    <Compile Include="Common\FrmExcelSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\FrmExcelSet.Designer.cs">
+      <DependentUpon>FrmExcelSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\GraphicsHelper.cs" />
+    <Compile Include="Common\PageInfo.cs" />
+    <Compile Include="Common\XMLHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThematicChart\ArrowLine\DrawIntervalLineCmd.cs" />
+    <Compile Include="ThematicChart\ArrowLine\DrawlineCmd.cs" />
+    <Compile Include="ThematicChart\ArrowLine\DrawMoveLineCmd.cs" />
+    <Compile Include="ThematicChart\ArrowLine\FrmIntervalLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThematicChart\ArrowLine\FrmIntervalLine.Designer.cs">
+      <DependentUpon>FrmIntervalLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThematicChart\ArrowLine\FrmLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThematicChart\ArrowLine\FrmLine.Designer.cs">
+      <DependentUpon>FrmLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThematicChart\ArrowLine\FrmMoveline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThematicChart\ArrowLine\FrmMoveline.Designer.cs">
+      <DependentUpon>FrmMoveline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThematicChart\Bar\BarMulitCommand.cs" />
+    <Compile Include="ThematicChart\Bar\BarNpCommand.cs" />
+    <Compile Include="ThematicChart\Bar\BarSingleCommand.cs" />
+    <Compile Include="ThematicChart\Bar\DrawBarMulit.cs" />
+    <Compile Include="ThematicChart\Bar\DrawBarSingle.cs" />
+    <Compile Include="ThematicChart\Bar\DrawNpBar.cs" />
+    <Compile Include="ThematicChart\Bar\FrmBarChartsSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThematicChart\Bar\FrmBarChartsSet.Designer.cs">
+      <DependentUpon>FrmBarChartsSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThematicChart\Bar\FrmSingleBarChartsSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThematicChart\Bar\FrmSingleBarChartsSet.Designer.cs">
+      <DependentUpon>FrmSingleBarChartsSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThematicChart\ChartsDataSource.cs" />
+    <Compile Include="ThematicChart\ColorFrm\ColorInfo.cs" />
+    <Compile Include="ThematicChart\ColorFrm\FrmColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThematicChart\ColorFrm\FrmColor.Designer.cs">
+      <DependentUpon>FrmColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThematicChart\Column\Column2DCommand.cs" />
+    <Compile Include="ThematicChart\Column\Column3DCommand.cs" />
+    <Compile Include="ThematicChart\Column\ColumnClassifyCommand.cs" />
+    <Compile Include="ThematicChart\Column\ColumnCubeCommand.cs" />
+    <Compile Include="ThematicChart\Column\ColumnRectCommand.cs" />
+    <Compile Include="ThematicChart\Column\Draw2DColumn.cs" />
+    <Compile Include="ThematicChart\Column\Draw3DColumn.cs" />
+    <Compile Include="ThematicChart\Column\DrawClassify.cs" />
+    <Compile Include="ThematicChart\Column\DrawCubeColumn.cs" />
+    <Compile Include="ThematicChart\Column\DrawRectColumn.cs" />
+    <Compile Include="ThematicChart\Column\FrmClassifySet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThematicChart\Column\FrmClassifySet.Designer.cs">
+      <DependentUpon>FrmClassifySet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThematicChart\Column\FrmCloumnChartsSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThematicChart\Column\FrmCloumnChartsSet.Designer.cs">
+      <DependentUpon>FrmCloumnChartsSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThematicChart\Column\FrmCloumnNumSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThematicChart\Column\FrmCloumnNumSet.Designer.cs">
+      <DependentUpon>FrmCloumnNumSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThematicChart\Column\DrawClassify3D.cs" />
+    <Compile Include="ThematicChart\Column\ColumnClassifyCommand3D.cs" />
+    <Compile Include="ThematicChart\Edit\MapChartMoveTool.cs" />
+    <Compile Include="ThematicChart\Edit\RepFreeMoveTool.cs" />
+    <Compile Include="ThematicChart\Edit\RepRuleEditor.cs" />
+    <Compile Include="ThematicChart\Line\DrawChartsLine.cs" />
+    <Compile Include="ThematicChart\Line\DrawChartsLineCmd.cs" />
+    <Compile Include="ThematicChart\Line\FrmLineChartsSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThematicChart\Line\FrmLineChartsSet.Designer.cs">
+      <DependentUpon>FrmLineChartsSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThematicChart\Pie\Draw3DCircelPie.cs" />
+    <Compile Include="ThematicChart\Pie\Draw3DCircelPie2.cs" />
+    <Compile Include="ThematicChart\Pie\Draw3DPie.cs" />
+    <Compile Include="ThematicChart\Pie\Draw3DRingPie.cs" />
+    <Compile Include="ThematicChart\Pie\Draw3DRingPie2.cs" />
+    <Compile Include="ThematicChart\Pie\FrmPieChartsSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThematicChart\Pie\FrmPieChartsSet.Designer.cs">
+      <DependentUpon>FrmPieChartsSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThematicChart\Pie\Pie3DCommand.cs" />
+    <Compile Include="ThematicChart\Pie\PieCircle3DCommand.cs" />
+    <Compile Include="ThematicChart\Pie\PieRingCommand.cs" />
+    <Compile Include="ThematicChart\Range\DrawRangePolygonTool.cs" />
+    <Compile Include="ThematicChart\Range\FrmRangeLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThematicChart\Range\FrmRangeLine.Designer.cs">
+      <DependentUpon>FrmRangeLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThematicChart\Table\borderHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThematicChart\Table\borderHelp.Designer.cs">
+      <DependentUpon>borderHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThematicChart\Table\ExcelToRep.cs" />
+    <Compile Include="ThematicChart\Table\FrmThematicTableSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThematicChart\Table\FrmThematicTableSet.Designer.cs">
+      <DependentUpon>FrmThematicTableSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThematicChart\Table\ThematicTableCommand.cs" />
+    <Compile Include="ThematicChart\ThematicMinMap\DrawMinMapCmd.cs" />
+    <Compile Include="ThematicChart\ThematicMinMap\FrmMinMapSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThematicChart\ThematicMinMap\FrmMinMapSet.Designer.cs">
+      <DependentUpon>FrmMinMapSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThematicChart\Thematic\ColorCombox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ThematicChart\Thematic\FrmPOIBcg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThematicChart\Thematic\FrmPOIBcg.Designer.cs">
+      <DependentUpon>FrmPOIBcg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThematicChart\Thematic\FrmThematicBcg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThematicChart\Thematic\FrmThematicBcg.Designer.cs">
+      <DependentUpon>FrmThematicBcg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThematicChart\Thematic\ThematicBcgCmd.cs" />
+    <Compile Include="ThematicChart\Thematic\ThematicPOICmd.cs" />
+    <Compile Include="Thematic\EarthQuake\CreateEarthQuakeWaveCmd.cs" />
+    <Compile Include="Thematic\EarthQuake\CreateEarthQuakeWaveTool.cs" />
+    <Compile Include="Thematic\EarthQuake\FrmEarthCmdSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thematic\EarthQuake\FrmEarthCmdSet.Designer.cs">
+      <DependentUpon>FrmEarthCmdSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Thematic\EarthQuake\FrmEarthToolSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thematic\EarthQuake\FrmEarthToolSet.Designer.cs">
+      <DependentUpon>FrmEarthToolSet.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChartAttrs\FrmColumnAttribute.resx">
+      <DependentUpon>FrmColumnAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartAttrs\FrmColumnClAttribute.resx">
+      <DependentUpon>FrmColumnClAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartAttrs\FrmPieAttribute.resx">
+      <DependentUpon>FrmPieAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\FrmExcelSet.resx">
+      <DependentUpon>FrmExcelSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThematicChart\ArrowLine\FrmIntervalLine.resx">
+      <DependentUpon>FrmIntervalLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThematicChart\ArrowLine\FrmLine.resx">
+      <DependentUpon>FrmLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThematicChart\ArrowLine\FrmMoveline.resx">
+      <DependentUpon>FrmMoveline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThematicChart\Bar\FrmBarChartsSet.resx">
+      <DependentUpon>FrmBarChartsSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThematicChart\Bar\FrmSingleBarChartsSet.resx">
+      <DependentUpon>FrmSingleBarChartsSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThematicChart\ColorFrm\FrmColor.resx">
+      <DependentUpon>FrmColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThematicChart\Column\FrmClassifySet.resx">
+      <DependentUpon>FrmClassifySet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThematicChart\Column\FrmCloumnChartsSet.resx">
+      <DependentUpon>FrmCloumnChartsSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThematicChart\Column\FrmCloumnNumSet.resx">
+      <DependentUpon>FrmCloumnNumSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThematicChart\Line\FrmLineChartsSet.resx">
+      <DependentUpon>FrmLineChartsSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThematicChart\Pie\FrmPieChartsSet.resx">
+      <DependentUpon>FrmPieChartsSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThematicChart\Range\FrmRangeLine.resx">
+      <DependentUpon>FrmRangeLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThematicChart\Table\borderHelp.resx">
+      <DependentUpon>borderHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThematicChart\Table\FrmThematicTableSet.resx">
+      <DependentUpon>FrmThematicTableSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThematicChart\ThematicMinMap\FrmMinMapSet.resx">
+      <DependentUpon>FrmMinMapSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThematicChart\Thematic\ColorCombox.resx">
+      <DependentUpon>ColorCombox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThematicChart\Thematic\FrmPOIBcg.resx">
+      <DependentUpon>FrmPOIBcg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThematicChart\Thematic\FrmThematicBcg.resx">
+      <DependentUpon>FrmThematicBcg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thematic\EarthQuake\FrmEarthCmdSet.resx">
+      <DependentUpon>FrmEarthCmdSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thematic\EarthQuake\FrmEarthToolSet.resx">
+      <DependentUpon>FrmEarthToolSet.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SMGI.Common\SMGI.Common.csproj">
+      <Project>{6CF02365-2D92-427B-92DB-1C55DAEEB1BF}</Project>
+      <Name>SMGI.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SMGI.DxForm\SMGI.DxForm\SMGI.DxForm.csproj">
+      <Project>{982F0B4A-756C-4A6E-98A3-4FC36C8DE7D8}</Project>
+      <Name>SMGI.DxForm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

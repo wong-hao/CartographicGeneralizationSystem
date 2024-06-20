@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Template>
+  <Content>
+    <BOUL note="常规骑界">
+      <Item gb="630201" qjWidth ="4" >省级界</Item>
+      <Item gb="640201" qjWidth ="3" >地级界</Item>
+      <Item gb="650201" qjWidth ="2" >县级界</Item>
+      <Item gb="660201" qjWidth ="1" >乡级界</Item>
+    </BOUL>
+  </Content>
+  <Scheme>
+    <Type MapLevel="自定义">
+      <BOUL note="常规骑界" mainRegion ="乡级界" adjRegion ="县级界"></BOUL>
+    </Type>
+  </Scheme>
+</Template>

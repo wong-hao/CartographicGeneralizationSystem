@@ -1,0 +1,16 @@
+D:\ECarto\trunk\bin\TBGeneralize.exe.config
+D:\ECarto\trunk\bin\TBGeneralize.exe
+D:\ECarto\trunk\bin\TBGeneralize.pdb
+D:\ECarto\trunk\code\TBGeneralize\obj\x86\Debug\TBGeneralize.csprojResolveAssemblyReference.cache
+D:\ECarto\trunk\code\TBGeneralize\obj\x86\Debug\TBGeneralize.Form1.resources
+D:\ECarto\trunk\code\TBGeneralize\obj\x86\Debug\TBGeneralize.csproj.GenerateResource.Cache
+D:\ECarto\trunk\code\TBGeneralize\obj\x86\Debug\TBGeneralize.exe
+D:\ECarto\trunk\code\TBGeneralize\obj\x86\Debug\TBGeneralize.pdb
+D:\工作\ECarto\ECarto\trunk\bin\TBGeneralize.exe.config
+D:\工作\ECarto\ECarto\trunk\bin\TBGeneralize.exe
+D:\工作\ECarto\ECarto\trunk\bin\TBGeneralize.pdb
+D:\工作\ECarto\ECarto\trunk\code\TBGeneralize\obj\x86\Debug\TBGeneralize.Form1.resources
+D:\工作\ECarto\ECarto\trunk\code\TBGeneralize\obj\x86\Debug\TBGeneralize.csproj.GenerateResource.Cache
+D:\工作\ECarto\ECarto\trunk\code\TBGeneralize\obj\x86\Debug\TBGeneralize.exe
+D:\工作\ECarto\ECarto\trunk\code\TBGeneralize\obj\x86\Debug\TBGeneralize.pdb
+D:\工作\ECarto\ECarto\trunk\code\TBGeneralize\obj\x86\Debug\TBGeneralize.csprojResolveAssemblyReference.cache

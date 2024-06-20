@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DataTable>
+  <DataRow  unit="毫米" display="true">
+    <AnnoName>湖南省</AnnoName>
+    <AnnoFontSize>4.2</AnnoFontSize>
+    <AnnoFontName>黑体</AnnoFontName>
+    <AnnoNote>省、直辖市行政中心</AnnoNote>
+    <AnnoColor>C0M100Y100K0</AnnoColor>
+  </DataRow>
+  <DataRow  unit="毫米" display="true">
+    <AnnoName>长沙市</AnnoName>
+    <AnnoFontName>黑体</AnnoFontName>
+    <AnnoFontSize>3.2</AnnoFontSize>
+    <AnnoNote>设区市行政中心</AnnoNote>
+    <AnnoColor></AnnoColor>
+  </DataRow>
+  <DataRow  unit="毫米" display="true">
+    <AnnoName>岳麓区</AnnoName>
+    <AnnoFontName>黑体</AnnoFontName>
+    <AnnoFontSize>2.7</AnnoFontSize>
+    <AnnoNote>县级行政中心</AnnoNote>
+    <AnnoColor></AnnoColor>
+  </DataRow>
+  <DataRow  unit="毫米" display="true">
+    <AnnoName>岳麓街道</AnnoName>
+    <AnnoFontName>黑体</AnnoFontName>
+    <AnnoFontSize>2.1</AnnoFontSize>
+    <AnnoNote>镇、乡、街道</AnnoNote>
+    <AnnoColor></AnnoColor>
+  </DataRow>
+  <DataRow  unit="毫米" display="true">
+    <AnnoName>保民村</AnnoName>
+    <AnnoFontName>黑体</AnnoFontName>
+    <AnnoFontSize>2.0</AnnoFontSize>
+    <AnnoNote>行政村、社区居委会</AnnoNote>
+    <AnnoColor></AnnoColor>
+  </DataRow>
+</DataTable>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content>
+  <HYDATOLINE note="河流面转线">
+	<LineType RuleID="1">
+	  <Item sql="gb=210101" diss="true">地面河段</Item>
+      <Item sql="gb=220100" diss="true">运河</Item>
+      <Item sql="gb=220200" diss="true">干渠</Item>
+      <Item sql="gb=230101" diss="true">湖泊</Item>
+      <Item sql="gb=240101" diss="true">水库</Item>
+      <Item sql="gb=240102" diss="true">水库</Item>
+      <Item sql="gb=230102" diss="false">池塘</Item>
+      <Item sql="gb=260200" diss="false">河湖岛</Item>
+	</LineType>
+  </HYDATOLINE>
+</Content>

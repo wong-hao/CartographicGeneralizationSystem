@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Option>
+  <EditOption>
+    <StickeyMoveTolerance>2</StickeyMoveTolerance>
+  </EditOption>
+  <AttributeBrush>
+    <DefaultCheckAllFN slected="false" />
+    <ExlucdeFN>
+      <FN>GB</FN>
+      <FN>HGB</FN>
+      <FN>LGB</FN>
+      <FN>CLASS</FN>
+    </ExlucdeFN>
+    <DefalutSelFN />
+  </AttributeBrush>
+</Option>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Template>
+  <Content>
+    <MapService>
+      <Item>
+        <MapServiceUrl type="Server">
+          <DataBase>hn5w</DataBase>
+          <IPAddress>172.16.34.171</IPAddress>
+          <UserName>sde</UserName>
+          <Password>123456</Password>
+        </MapServiceUrl>
+        <MapServiceName>湖南省定位地图.Mxd</MapServiceName>
+        <MapServiceDes>多尺度数据库数据范围</MapServiceDes>
+      </Item>
+    </MapService>
+  </Content>
+</Template>

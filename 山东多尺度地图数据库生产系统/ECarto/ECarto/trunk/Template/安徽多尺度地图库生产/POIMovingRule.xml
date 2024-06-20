@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<POIMovingRule>
+  <PointLayer>
+    <Item calssname="AGNP" sql="class ='AB'" size="5" checked="True">省级行政中心</Item>
+    <Item calssname="AGNP" sql="class ='AD'" size="4.5" checked="True">地级行政中心</Item>
+    <Item calssname="AGNP" sql="class ='AE' or class='AF'" size="4" checked="True">区县级行政中心</Item>
+    <Item calssname="AGNP" sql="class ='AH' or class='AI' or class='AJ'" size="2.5" checked="True">乡镇级行政中心</Item>
+    <Item calssname="AGNP" sql="class ='AK'" size="1.8" checked="True">行政村</Item>
+    <Item calssname="AGNP" sql="class ='BB'" size="1.2" checked="True">自然村</Item>
+    <Item calssname="AGNP" sql="class ='AK1'" size="1.2" checked="True">社区名</Item>
+    <Item calssname="AGNP" sql="class ='BA'" size="1.2" checked="True">小区名</Item>
+    <Item calssname="AGNP" sql="class ='CC'" size="1.2" checked="True">农林牧渔场</Item>
+    <Item calssname="LFCP" sql="gb =450103" size="2.5" checked="True">客运站</Item>
+  </PointLayer>
+  <LineLayer>
+    <Item calssname="LRDL" sql="gb in (420901,420902)" width="1.8" checked="True">高速公路</Item>
+    <Item calssname="LRDL" sql="gb in (420101,420102)" width="1.2" checked="True">国道</Item>
+    <Item calssname="LRDL" sql="gb in (420201,420202)" width="1.0" checked="True">省道</Item>
+    <Item calssname="LRDL" sql="gb in (420301,420302)" width="0.45" checked="True">县道</Item>
+    <Item calssname="LRDL" sql="gb in (420400)" width="0.25" checked="True">乡道</Item>
+    <Item calssname="LRDL" sql="gb in (420800)" width="0.25" checked="True">其他公路</Item>
+    <Item calssname="LRDL" sql="gb in (430200)" width="1.2" checked="True">快速路</Item>
+    <Item calssname="LRDL" sql="gb in (430501)" width="1.4" checked="True">主干道</Item>
+    <Item calssname="LRDL" sql="gb in (430502)" width="1.0" checked="True">次干道</Item>
+    <Item calssname="LRDL" sql="gb in (430503)" width="0.7" checked="True">支线</Item>
+    <Item calssname="LRDL" sql="gb in (440100,440200,440300)" width="0.2" checked="True">乡村道路</Item>
+    <Item calssname="LRRL" sql="" width="0.9" checked="True">铁路</Item>
+    <Item calssname="HYDL" sql="hgb =210101" width="0.2" checked="True">河流</Item>
+    <Item calssname="HYDL" sql="hgb =220200" width="0.4" checked="True">干渠</Item>
+    <Item calssname="HYDL" sql="hgb =220300" width="0.2" checked="True">支渠</Item>
+    <Item calssname="HYDA" sql="" width="0.12" checked="True">水系面边线</Item>
+  </LineLayer>
+</POIMovingRule>

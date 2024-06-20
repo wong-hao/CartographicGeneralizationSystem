@@ -1,0 +1,10 @@
+D:\ECarto\trunk\code\SMGI.Plugin.BaseFunction\obj\Release\SMGI.Plugin.BaseFunction.csproj.ResolveComReference.cache
+D:\ECarto\trunk\code\SMGI.Plugin.BaseFunction\obj\Release\SMGI.Plugin.BaseFunction.ReferenceScaleDialog.resources
+D:\ECarto\trunk\code\SMGI.Plugin.BaseFunction\obj\Release\SMGI.Plugin.BaseFunction.SnapEditorSetForm.resources
+D:\ECarto\trunk\code\SMGI.Plugin.BaseFunction\obj\Release\SMGI.Plugin.BaseFunction.GDBProjectForm.resources
+D:\ECarto\trunk\code\SMGI.Plugin.BaseFunction\obj\Release\SMGI.Plugin.BaseFunction.csproj.GenerateResource.Cache
+D:\ECarto\trunk\Release\Plugins\SMGI.Plugin.BaseFunction.dll
+D:\ECarto\trunk\Release\Plugins\SMGI.Plugin.BaseFunction.pdb
+D:\ECarto\trunk\code\SMGI.Plugin.BaseFunction\obj\Release\SMGI.Plugin.BaseFunction.dll
+D:\ECarto\trunk\code\SMGI.Plugin.BaseFunction\obj\Release\SMGI.Plugin.BaseFunction.pdb
+D:\ECarto\trunk\code\SMGI.Plugin.BaseFunction\obj\Release\Interop.TrueCMYKLib.dll

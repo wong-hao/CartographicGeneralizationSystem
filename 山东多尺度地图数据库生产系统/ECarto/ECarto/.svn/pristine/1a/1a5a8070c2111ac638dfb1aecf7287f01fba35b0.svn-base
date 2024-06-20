@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6CF02365-2D92-427B-92DB-1C55DAEEB1BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SMGI.Common</RootNamespace>
+    <AssemblyName>SMGI.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\lib\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\lib\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcMapUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CartographyTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CartoUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRaster, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DisplayUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Editor, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Framework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoDatabaseUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessing, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Maplex, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algrithm\HydroAlgorithm.cs" />
+    <Compile Include="Algrithm\SimplifyAlgorithm.cs" />
+    <Compile Include="Application.cs" />
+    <Compile Include="AttributeTable\AttributeProcessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttributeTable\AttributeProcessForm.Designer.cs">
+      <DependentUpon>AttributeProcessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttributeTable\AttributeTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttributeTable\AttributeTableForm.designer.cs">
+      <DependentUpon>AttributeTableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttributeTable\FieldPropertyDescriptor.cs" />
+    <Compile Include="AttributeTable\FrmLayerOpenAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttributeTable\FrmLayerOpenAttribute.Designer.cs">
+      <DependentUpon>FrmLayerOpenAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttributeTable\TableWrapper.cs" />
+    <Compile Include="AutoResource.Designer.cs" />
+    <Compile Include="AutoSaveProperty.cs" />
+    <Compile Include="BookMarkDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookMarkDialog.Designer.cs">
+      <DependentUpon>BookMarkDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="图层属性\AdvancedLabelOfStretchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="图层属性\AdvancedLabelOfStretchForm.Designer.cs">
+      <DependentUpon>AdvancedLabelOfStretchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="图层属性\ColorRampComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="图层属性\ColorRampComboBox.Designer.cs">
+      <DependentUpon>ColorRampComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="图层属性\ColorRampSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="图层属性\ColorRampSetForm.Designer.cs">
+      <DependentUpon>ColorRampSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommandInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommandManager.cs" />
+    <Compile Include="CommonTemplateClass.cs" />
+    <Compile Include="Decoration.cs" />
+    <Compile Include="FastDrawer.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="IConfig.cs" />
+    <Compile Include="IInitInfo.cs" />
+    <Compile Include="InfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoForm.Designer.cs">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaperSeting.cs" />
+    <Compile Include="图层属性\RasterLayerPropertyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="图层属性\RasterLayerPropertyForm.designer.cs">
+      <DependentUpon>RasterLayerPropertyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegFrom.Designer.cs">
+      <DependentUpon>RegFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistryHelper.cs" />
+    <Compile Include="RenderFeatureLayer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SelectByAttributesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectByAttributesDialog.designer.cs">
+      <DependentUpon>SelectByAttributesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectDataDlg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SelectDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectDataForm.Designer.cs">
+      <DependentUpon>SelectDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectFeatureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectFeatureForm.Designer.cs">
+      <DependentUpon>SelectFeatureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SMGIContextMenu.cs" />
+    <Compile Include="SMGIMaps.cs" />
+    <Compile Include="BookMarkInfo.cs" />
+    <Compile Include="ParameterDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterDialog.Designer.cs">
+      <DependentUpon>ParameterDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputStringForm.Designer.cs">
+      <DependentUpon>InputStringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginManager.cs" />
+    <Compile Include="SMGICommand.cs" />
+    <Compile Include="SMGITool.cs" />
+    <Compile Include="ClassificationAndCode.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="GConvert.cs" />
+    <Compile Include="DictionaryPropertyGridAdapter.cs" />
+    <Compile Include="IconGeter.cs" />
+    <Compile Include="InitForm.cs" />
+    <Compile Include="IPluginHost.cs" />
+    <Compile Include="LayerManager.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="MapControlManager.cs" />
+    <Compile Include="MapSubdivision.cs" />
+    <Compile Include="MarginSettings.cs" />
+    <Compile Include="PageLayoutSettings.cs" />
+    <Compile Include="Parameter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoftRegister.cs" />
+    <Compile Include="StyleManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableForm.Designer.cs">
+      <DependentUpon>TableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateManager.cs" />
+    <Compile Include="TemplatesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemplatesDialog.Designer.cs">
+      <DependentUpon>TemplatesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemplateSelectForm.Designer.cs">
+      <DependentUpon>TemplateSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TOCEventManager.cs" />
+    <Compile Include="TOCSeleteItem.cs" />
+    <Compile Include="TemplateClass.cs" />
+    <Compile Include="WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm.Designer.cs">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workspace.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AttributeTable\AttributeProcessForm.resx">
+      <DependentUpon>AttributeProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttributeTable\AttributeTableForm.resx">
+      <DependentUpon>AttributeTableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttributeTable\FrmLayerOpenAttribute.resx">
+      <DependentUpon>FrmLayerOpenAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutoResource.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AutoResource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookMarkDialog.resx">
+      <DependentUpon>BookMarkDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="图层属性\AdvancedLabelOfStretchForm.resx">
+      <DependentUpon>AdvancedLabelOfStretchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="图层属性\ColorRampSetForm.resx">
+      <DependentUpon>ColorRampSetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoForm.resx">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="图层属性\RasterLayerPropertyForm.resx">
+      <DependentUpon>RasterLayerPropertyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegFrom.resx">
+      <DependentUpon>RegFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterDialog.resx">
+      <DependentUpon>ParameterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputStringForm.resx">
+      <DependentUpon>InputStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectByAttributesDialog.resx">
+      <DependentUpon>SelectByAttributesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectDataForm.resx">
+      <DependentUpon>SelectDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectFeatureForm.resx">
+      <DependentUpon>SelectFeatureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableForm.resx">
+      <DependentUpon>TableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemplatesDialog.resx">
+      <DependentUpon>TemplatesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemplateSelectForm.resx">
+      <DependentUpon>TemplateSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm.resx">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\TemplateManager.datasource" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\制图选择.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

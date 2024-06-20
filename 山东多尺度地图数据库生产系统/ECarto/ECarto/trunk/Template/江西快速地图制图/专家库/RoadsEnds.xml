@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RoadsEnds>
+  <Content FCName="LRDL">
+    <Item  sql = "LGB = 420901 or LGB = 420902">高速公路</Item>
+    <Item  sql = "LGB = 430200">快速路</Item>
+    <Item  sql = "LGB = 420101  or LGB = 420102">国道</Item>
+    <Item  sql = "LGB = 420201  or LGB = 420202">省道</Item>
+    <Item  sql = "LGB = 420301  or LGB = 420302">县道</Item>
+    <Item  sql = "LGB = 420400">乡道</Item>
+    <Item  sql = "LGB = 420500">专用公路</Item>
+    <Item  sql = "LGB = 420800">其他公路</Item>
+    <Item  sql = "LGB = 430501">街道主干道</Item>
+    <Item  sql = "LGB = 430502">街道次干道</Item>
+    <Item  sql = "LGB = 430503">街道支线</Item>
+    <Item  sql = "LGB = 430600">内部道路</Item>
+    <Item  sql="LGB = 440100">机耕路</Item>
+    <Item  sql="LGB = 440200">乡村路</Item>
+    <Item  sql="LGB = 440300">小路</Item>
+  </Content>
+</RoadsEnds>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Template>
+   <Lengend name="图例方案一">
+     <Lengend>Lengend.mdb</Lengend>
+     <LengendShare name="共享图例">LengendShare.Xml</LengendShare>
+     <LengendGroup name="组合图例">LengendGroup.Xml</LengendGroup>
+   </Lengend>
+   <Lengend name="图例方案二">
+     <Lengend>Lengend.mdb</Lengend>
+     <LengendShare name="共享图例">LengendShare.Xml</LengendShare>
+     <LengendGroup name="组合图例">LengendGroup.Xml</LengendGroup>
+   </Lengend>
+   <Lengend name="图例方案三">
+     <Lengend>Lengend.mdb</Lengend>
+     <LengendShare name="共享图例">LengendShare.Xml</LengendShare>
+     <LengendGroup name="组合图例">LengendGroup.Xml</LengendGroup>
+   </Lengend>
+</Template>

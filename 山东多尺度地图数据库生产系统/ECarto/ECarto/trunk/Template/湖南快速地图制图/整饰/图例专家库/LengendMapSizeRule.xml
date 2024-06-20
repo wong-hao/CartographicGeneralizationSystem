@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LengendTemplate>
+  <LengendInfo>
+    <Lengend Type="十六开" Width="273" Height="196">
+      <Column Name="图例列数">2</Column>
+      <MapOutLine Name="外边框">false</MapOutLine>
+      <CharactersXStep Unit="毫米" Name="图例文字水平间隔">7</CharactersXStep>
+      <TitleFontSize Unit="毫米" Name="图例标题字体">4</TitleFontSize>
+      <ItemFontSize Unit="毫米" Name="图例项字体">2.5</ItemFontSize>
+      <ItemYStep Unit="毫米" Name="图例项垂直间隔">5</ItemYStep>
+      <ItemXStep Unit="毫米" Name="图例项水平间隔">30</ItemXStep>
+      <ScaleBarStep Unit="毫米" Name="比例尺间隔">10</ScaleBarStep>
+      <LegendType Name="图例类型">0</LegendType>
+      <PlLegendLength Unit="毫米" Name="线图例长度">6</PlLegendLength>
+      <PoLegendLength Unit="毫米" Name="面图例长度">6</PoLegendLength>
+      <PoLegendWidth Unit="毫米" Name="面图例宽度">1</PoLegendWidth>
+    </Lengend>
+    <Lengend Type="八开" Width="393" Height="273">
+      <Column Name="图例列数">2</Column>
+      <MapOutLine Name="外边框">false</MapOutLine>
+      <CharactersXStep Unit="毫米" Name="图例文字水平间隔">9</CharactersXStep>
+      <TitleFontSize Unit="毫米" Name="图例标题字体">4.5</TitleFontSize>
+      <ItemFontSize Unit="毫米" Name="图例项字体">2.75</ItemFontSize>
+      <ItemYStep Unit="毫米" Name="图例项垂直间隔">5.5</ItemYStep>
+      <ItemXStep Unit="毫米" Name="图例项水平间隔">33</ItemXStep>
+      <ScaleBarStep Unit="毫米" Name="比例尺间隔">12</ScaleBarStep>
+      <LegendType Name="图例类型">0</LegendType>
+      <PlLegendLength Unit="毫米" Name="线图例长度">7</PlLegendLength>
+      <PoLegendLength Unit="毫米" Name="面图例长度">7</PoLegendLength>
+      <PoLegendWidth Unit="毫米" Name="面图例宽度">2</PoLegendWidth>
+    </Lengend>
+    <Lengend Type="四开" Width="546" Height="393">
+      <Column Name="图例列数">2</Column>
+      <MapOutLine Name="外边框">true</MapOutLine>
+      <CharactersXStep Unit="毫米" Name="图例文字水平间隔">11</CharactersXStep>
+      <TitleFontSize Unit="毫米" Name="图例标题字体">5.25</TitleFontSize>
+      <ItemFontSize Unit="毫米" Name="图例项字体">3</ItemFontSize>
+      <ItemYStep Unit="毫米" Name="图例项垂直间隔">7</ItemYStep>
+      <ItemXStep Unit="毫米" Name="图例项水平间隔">39</ItemXStep>
+      <ScaleBarStep Unit="毫米" Name="比例尺间隔">12</ScaleBarStep>
+      <LegendType Name="图例类型">0</LegendType>
+      <PlLegendLength Unit="毫米" Name="线图例长度">9</PlLegendLength>
+      <PoLegendLength Unit="毫米" Name="面图例长度">9</PoLegendLength>
+      <PoLegendWidth Unit="毫米" Name="面图例宽度">3</PoLegendWidth>
+     </Lengend>
+    <Lengend Type="对开" Width="787" Height="546">
+      <Column Name="图例列数">2</Column>
+      <MapOutLine Name="外边框">true</MapOutLine>
+      <CharactersXStep Unit="毫米" Name="图例文字水平间隔">14</CharactersXStep>
+      <TitleFontSize Unit="毫米" Name="图例标题字体">6</TitleFontSize>
+      <ItemFontSize Unit="毫米" Name="图例项字体">3.5</ItemFontSize>
+      <ItemYStep Unit="毫米" Name="图例项垂直间隔">9</ItemYStep>
+      <ItemXStep Unit="毫米" Name="图例项水平间隔">48</ItemXStep>
+      <ScaleBarStep Unit="毫米" Name="比例尺间隔">15</ScaleBarStep>
+      <LegendType Name="图例类型">0</LegendType>
+      <PlLegendLength Unit="毫米" Name="线图例长度">12</PlLegendLength>
+      <PoLegendLength Unit="毫米" Name="面图例长度">12</PoLegendLength>
+      <PoLegendWidth Unit="毫米" Name="面图例宽度">4</PoLegendWidth>
+    </Lengend>
+    <Lengend Type="全开" Width="1092" Height="787">
+      <Column Name="图例列数">2</Column>
+      <MapOutLine Name="外边框">true</MapOutLine>
+      <CharactersXStep Unit="毫米" Name="图例文字水平间隔">20</CharactersXStep>
+      <TitleFontSize Unit="毫米" Name="图例标题字体">7</TitleFontSize>
+      <ItemFontSize Unit="毫米" Name="图例项字体">4</ItemFontSize>
+      <ItemYStep Unit="毫米" Name="图例项垂直间隔">10</ItemYStep>
+      <ItemXStep Unit="毫米" Name="图例项水平间隔">56</ItemXStep>
+      <ScaleBarStep Unit="毫米" Name="比例尺间隔">15</ScaleBarStep>
+      <LegendType Name="图例类型">0</LegendType>
+      <PlLegendLength Unit="毫米" Name="线图例长度">18</PlLegendLength>
+      <PoLegendLength Unit="毫米" Name="面图例长度">18</PoLegendLength>
+      <PoLegendWidth Unit="毫米" Name="面图例宽度">5</PoLegendWidth>
+    </Lengend>
+      <Lengend Type="双全开" Width="1574" Height="1092">
+      <Column Name="图例列数">2</Column>
+      <MapOutLine Name="外边框">true</MapOutLine>
+      <CharactersXStep Unit="毫米" Name="图例文字水平间隔">20</CharactersXStep>
+      <TitleFontSize Unit="毫米" Name="图例标题字体">7</TitleFontSize>
+      <ItemFontSize Unit="毫米" Name="图例项字体">4.0</ItemFontSize>
+      <ItemYStep Unit="毫米" Name="图例项垂直间隔">10</ItemYStep>
+      <ItemXStep Unit="毫米" Name="图例项水平间隔">56</ItemXStep>
+      <ScaleBarStep Unit="毫米" Name="比例尺间隔">15</ScaleBarStep>
+      <LegendType Name="图例类型">0</LegendType>
+      <PlLegendLength Unit="毫米" Name="线图例长度">18</PlLegendLength>
+      <PoLegendLength Unit="毫米" Name="面图例长度">18</PoLegendLength>
+      <PoLegendWidth Unit="毫米" Name="面图例宽度">5</PoLegendWidth>
+    </Lengend>
+  </LengendInfo>
+  </LengendTemplate>

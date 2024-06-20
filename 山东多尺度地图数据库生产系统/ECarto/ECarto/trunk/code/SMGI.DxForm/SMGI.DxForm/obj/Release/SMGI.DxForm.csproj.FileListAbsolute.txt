@@ -1,0 +1,10 @@
+D:\ECarto\trunk\Release\bin\full.ico
+D:\ECarto\trunk\Release\bin\SMGI.DxForm.exe
+D:\ECarto\trunk\Release\bin\SMGI.DxForm.pdb
+D:\ECarto\trunk\code\SMGI.DxForm\SMGI.DxForm\obj\Release\SMGI.DxForm.AboutECarto.resources
+D:\ECarto\trunk\code\SMGI.DxForm\SMGI.DxForm\obj\Release\SMGI.DxForm.MainForm.resources
+D:\ECarto\trunk\code\SMGI.DxForm\SMGI.DxForm\obj\Release\SMGI.DxForm.MainResource.resources
+D:\ECarto\trunk\code\SMGI.DxForm\SMGI.DxForm\obj\Release\SMGI.DxForm.Properties.Resources.resources
+D:\ECarto\trunk\code\SMGI.DxForm\SMGI.DxForm\obj\Release\SMGI.DxForm.csproj.GenerateResource.Cache
+D:\ECarto\trunk\code\SMGI.DxForm\SMGI.DxForm\obj\Release\SMGI.DxForm.exe
+D:\ECarto\trunk\code\SMGI.DxForm\SMGI.DxForm\obj\Release\SMGI.DxForm.pdb

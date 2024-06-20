@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MapRule>
+  <Item Scale="10万">双全开模板</Item>
+  <Item Scale="25万">全开模板</Item>
+  <Item Scale="25万">对开模板</Item>
+  <Item Scale="50万">四开模板</Item>
+  <Item Scale="50万">八开模板</Item>
+  <Item Scale="100万">十六开模板</Item>
+</MapRule>

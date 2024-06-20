@@ -1,0 +1,1263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F7CE1E09-3908-4A4B-A0CB-9E2F13292113}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SMGI.Plugin.EmergencyMap</RootNamespace>
+    <AssemblyName>SMGI.Plugin.EmergencyMap</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Release\Plugins\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Images.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v13.1.UI, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v13.1.Wizard, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraWizard.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Connection.Local, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AnalysisTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CartographyTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CartoUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Catalog, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CatalogUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ConversionTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataManagementTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRaster, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DisplayUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Editor, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.EngineCore, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Framework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoAnalyst, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoDatabaseUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessing, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GISClient, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Maplex, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SpatialAnalyst, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AppEventListenerCmd.cs" />
+    <Compile Include="Common\ColorHelper.cs" />
+    <Compile Include="Common\EnvironmentSettings.cs" />
+    <Compile Include="Common\ExcelHelper.cs" />
+    <Compile Include="Common\ExpertiseDatabase.cs" />
+    <Compile Include="Common\ExpertiseParamsClass.cs" />
+    <Compile Include="Common\ShapeFileWriter.cs" />
+    <Compile Include="Common\ValidateUtil.cs" />
+    <Compile Include="专题工具\ThematicAnnotationCreateCmd.cs" />
+    <Compile Include="专题工具\行政区普色\税源\BreakClass.cs" />
+    <Compile Include="专题工具\行政区普色\税源\ColorHelper.cs" />
+    <Compile Include="专题工具\行政区普色\税源\ComBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="专题工具\行政区普色\税源\FrmClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="专题工具\行政区普色\税源\FrmClass.Designer.cs">
+      <DependentUpon>FrmClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="专题工具\行政区普色\税源\FrmClassDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="专题工具\行政区普色\税源\FrmClassDetail.Designer.cs">
+      <DependentUpon>FrmClassDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="专题工具\行政区普色\税源\TaxRegionColorCmd.cs" />
+    <Compile Include="右键菜单\LayerProperty.cs" />
+    <Compile Include="右键菜单\NewGroupLayerCmd.cs" />
+    <Compile Include="地图处理\BridgeSizeCmd.cs" />
+    <Compile Include="地图处理\DykeDamSelectCmdJS.cs" />
+    <Compile Include="地图处理\FrmBridgeSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图处理\FrmBridgeSize.designer.cs">
+      <DependentUpon>FrmBridgeSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图处理\JustifyCulvertCmd.cs" />
+    <Compile Include="地图处理\JustifyCulvertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图处理\JustifyCulvertForm.designer.cs">
+      <DependentUpon>JustifyCulvertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图处理\PondDividerSelectCmdJS.cs" />
+    <Compile Include="地图整饰\单侧色带\FrmSDMColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\单侧色带\FrmSDMColor.Designer.cs">
+      <DependentUpon>FrmSDMColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图整饰\单侧色带\FrmSDMColorAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\单侧色带\FrmSDMColorAdd.Designer.cs">
+      <DependentUpon>FrmSDMColorAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图整饰\单侧色带\FrmSideSDM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\单侧色带\FrmSideSDM.Designer.cs">
+      <DependentUpon>FrmSideSDM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图整饰\单侧色带\SDMSideCmd.cs" />
+    <Compile Include="地图整饰\单侧色带\SideHelper.cs" />
+    <Compile Include="地图整饰\图例\FrmLgSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\图例\FrmLgSet.designer.cs">
+      <DependentUpon>FrmLgSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图整饰\图例\LengendHelper.cs" />
+    <Compile Include="境界跳绘\BoulAutoProduceHelper.cs" />
+    <Compile Include="境界跳绘\BoulSkipDrawCmd.cs" />
+    <Compile Include="境界跳绘\BoulSkipDrawHelper.cs" />
+    <Compile Include="境界跳绘\FrmBOULTHSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="境界跳绘\FrmBOULTHSet.Designer.cs">
+      <DependentUpon>FrmBOULTHSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实用工具\AddThematicDataCmd.cs" />
+    <Compile Include="实用工具\AddThematicDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实用工具\AddThematicDataForm.Designer.cs">
+      <DependentUpon>AddThematicDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实用工具\CheckSymbolConflictCmd.cs" />
+    <Compile Include="实用工具\CheckSymbolConflictForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实用工具\CheckSymbolConflictForm.designer.cs">
+      <DependentUpon>CheckSymbolConflictForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实用工具\DataSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实用工具\DataSearchForm.Designer.cs">
+      <DependentUpon>DataSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="右键菜单\AttributeTable\AttributeTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="右键菜单\AttributeTable\AttributeTableForm.designer.cs">
+      <DependentUpon>AttributeTableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="右键菜单\AttributeTable\FieldPropertyDescriptor.cs" />
+    <Compile Include="右键菜单\AttributeTable\TableWrapper.cs" />
+    <Compile Include="右键菜单\UnselectedFeatureTableOpenCmd.cs" />
+    <Compile Include="地图处理\FrmMaskingSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图处理\FrmMaskingSet.designer.cs">
+      <DependentUpon>FrmMaskingSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图处理\HydlMaskProcessCmd.cs" />
+    <Compile Include="地图处理\MaskProcessHelper.cs" />
+    <Compile Include="地图处理\RiverBoundayExtractCmd.cs" />
+    <Compile Include="实用工具\ClipDataByInnerborderCmd.cs" />
+    <Compile Include="实用工具\ClipDataByInnerborderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实用工具\ClipDataByInnerborderForm.Designer.cs">
+      <DependentUpon>ClipDataByInnerborderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实用工具\DataSearchTable.cs" />
+    <Compile Include="实用工具\RepresentationSwitch.cs" />
+    <Compile Include="实用工具\ShowDataSearchViewCmd.cs" />
+    <Compile Include="引线标注\属性标注\FrmAttriPropertySet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="引线标注\属性标注\FrmAttriPropertySet.Designer.cs">
+      <DependentUpon>FrmAttriPropertySet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="引线标注\编辑\AnchorMoveTool.cs" />
+    <Compile Include="引线标注\FrmLabelAd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="引线标注\FrmLabelAd.Designer.cs">
+      <DependentUpon>FrmLabelAd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="引线标注\编辑\LabelElementRotateTool.cs" />
+    <Compile Include="引线标注\图形标注\LabelLineRectangleTool.cs" />
+    <Compile Include="引线标注\LabelClass.cs" />
+    <Compile Include="引线标注\LabelPropertyTool.cs" />
+    <Compile Include="引线标注\图形标注\LabelLineRoundRectTool.cs" />
+    <Compile Include="引线标注\图形标注\LabelLineEllipticTool.cs" />
+    <Compile Include="引线标注\图形标注\LabelLineDiamondTool.cs" />
+    <Compile Include="引线标注\图形标注\LabelLineCloudTool.cs" />
+    <Compile Include="引线标注\图形标注\LabelLineCloud1Tool.cs" />
+    <Compile Include="引线标注\图形标注\LabelLineCloud2Tool.cs" />
+    <Compile Include="引线标注\图形标注\LabelLineCloud3Tool.cs" />
+    <Compile Include="引线标注\编辑\LabelEditTool.cs" />
+    <Compile Include="引线标注\气泡标注\LabelBallCalloutTool.cs" />
+    <Compile Include="引线标注\气泡标注\FrmLableBall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="引线标注\气泡标注\FrmLableBall.Designer.cs">
+      <DependentUpon>FrmLableBall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="引线标注\图形标注\FrmLabelLineSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="引线标注\图形标注\FrmLabelLineSet.Designer.cs">
+      <DependentUpon>FrmLabelLineSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="引线标注\LablePointExportCmd.cs" />
+    <Compile Include="引线标注\FrmLbExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="引线标注\FrmLbExport.Designer.cs">
+      <DependentUpon>FrmLbExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="引线标注\图形标注\LabelLineCircleTool.cs" />
+    <Compile Include="引线标注\图形标注\FrmLabelPropertySet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="引线标注\图形标注\FrmLabelPropertySet.Designer.cs">
+      <DependentUpon>FrmLabelPropertySet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="引线标注\SelectBySQLDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="引线标注\SelectBySQLDialog.designer.cs">
+      <DependentUpon>SelectBySQLDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="引线标注\属性标注\FrmAttributeTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="引线标注\属性标注\FrmAttributeTool.Designer.cs">
+      <DependentUpon>FrmAttributeTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="引线标注\属性标注\FrmLabelLyr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="引线标注\属性标注\FrmLabelLyr.designer.cs">
+      <DependentUpon>FrmLabelLyr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="引线标注\属性标注\FrmLabelInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="引线标注\属性标注\FrmLabelInfo.Designer.cs">
+      <DependentUpon>FrmLabelInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="引线标注\属性标注\LabelAttributeTool.cs" />
+    <Compile Include="引线标注\属性标注\LabelAttributeTool1.cs" />
+    <Compile Include="引线标注\常规折线标注\FrmPolyLineSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="引线标注\常规折线标注\FrmPolyLineSet.Designer.cs">
+      <DependentUpon>FrmPolyLineSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="引线标注\常规折线标注\FrmPolyLinePropertySet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="引线标注\常规折线标注\FrmPolyLinePropertySet.Designer.cs">
+      <DependentUpon>FrmPolyLinePropertySet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="引线标注\常规折线标注\LabelPolyLineTool.cs" />
+    <Compile Include="引线标注\注记表达式\FrmAnnoMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="引线标注\注记表达式\FrmAnnoMap.Designer.cs">
+      <DependentUpon>FrmAnnoMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="引线标注\注记表达式\LabelExpressHelper.cs" />
+    <Compile Include="引线标注\注记表达式\FrmLbExpress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="引线标注\注记表达式\FrmLbExpress.Designer.cs">
+      <DependentUpon>FrmLbExpress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="引线标注\符号标注\FrmSymTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="引线标注\符号标注\FrmSymTool.Designer.cs">
+      <DependentUpon>FrmSymTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="引线标注\符号标注\LabelAttSymTool.cs" />
+    <Compile Include="引线标注\符号标注\FrmSymLabelProperty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="引线标注\符号标注\FrmSymLabelProperty.Designer.cs">
+      <DependentUpon>FrmSymLabelProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据获取\地图定位\AdministrativeRegeionLocationCmd.cs" />
+    <Compile Include="数据获取\地图定位\AdministrativeRegeionLocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据获取\地图定位\AdministrativeRegeionLocationForm.designer.cs">
+      <DependentUpon>AdministrativeRegeionLocationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据获取\地图定位\FrmMapSizeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据获取\地图定位\FrmMapSizeInfo.designer.cs">
+      <DependentUpon>FrmMapSizeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据获取\地图定位\MapSizeInfoCmd.cs" />
+    <Compile Include="数据选取\FeatureSelectCmd.cs" />
+    <Compile Include="数据选取\FeatureSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据选取\FeatureSelectForm.designer.cs">
+      <DependentUpon>FeatureSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据选取\POI选取\POIAutoSelectionCmd.cs" />
+    <Compile Include="数据选取\POI选取\POIHelper.cs" />
+    <Compile Include="数据选取\POI选取\POIManualSelectionCmd.cs" />
+    <Compile Include="数据选取\POI选取\POISelection.cs" />
+    <Compile Include="数据选取\POI选取\POISelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据选取\POI选取\POISelectionForm.designer.cs">
+      <DependentUpon>POISelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据选取\POI选取\POISelectionFormEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据选取\POI选取\POISelectionFormEx.designer.cs">
+      <DependentUpon>POISelectionFormEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="一键成图\AuoExportMapCommand.cs" />
+    <Compile Include="一键成图\FrmAutoMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="一键成图\FrmAutoMap.Designer.cs">
+      <DependentUpon>FrmAutoMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="一键成图\FrmBOUASet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="一键成图\FrmBOUASet.Designer.cs">
+      <DependentUpon>FrmBOUASet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="一键成图\FrmNameSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="一键成图\FrmNameSet.Designer.cs">
+      <DependentUpon>FrmNameSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="一键成图\FrmSDMSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="一键成图\FrmSDMSet.Designer.cs">
+      <DependentUpon>FrmSDMSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="专题标绘\图形元素\EditElementPropertyCmd.cs" />
+    <Compile Include="专题标绘\图形元素\InsertPictureCmd.cs" />
+    <Compile Include="专题标绘\图形元素\InsertTextTool.cs" />
+    <Compile Include="专题标绘\地震\CreateEarthQuakeWaveCmd.cs" />
+    <Compile Include="专题标绘\地震\CreateEarthQuakeWaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="专题标绘\地震\CreateEarthQuakeWaveForm.Designer.cs">
+      <DependentUpon>CreateEarthQuakeWaveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="专题标绘\地震\CreateEarthQuakeWaveTool.cs" />
+    <Compile Include="制图编辑\RepRuleEditor.cs" />
+    <Compile Include="制图编辑\RepRuleMove.cs" />
+    <Compile Include="Common\CommonMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="右键菜单\AttributeTableOpenCmd.cs" />
+    <Compile Include="右键菜单\LayerLabelSet.cs" />
+    <Compile Include="右键菜单\LayerLabelSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="右键菜单\LayerLabelSetForm.Designer.cs">
+      <DependentUpon>LayerLabelSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="右键菜单\LayerOnlySelect.cs" />
+    <Compile Include="右键菜单\LayerRemove.cs" />
+    <Compile Include="右键菜单\LayerSelectableManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="右键菜单\LayerSelectableManageForm.Designer.cs">
+      <DependentUpon>LayerSelectableManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="右键菜单\LayerSlectableManage.cs" />
+    <Compile Include="右键菜单\MapDoActive.cs" />
+    <Compile Include="右键菜单\RecalFullExtent.cs" />
+    <Compile Include="右键菜单\ReferenceScaleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="右键菜单\ReferenceScaleDialog.Designer.cs">
+      <DependentUpon>ReferenceScaleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="右键菜单\ReferenceScaleScaleSetCmd.cs" />
+    <Compile Include="地图处理\DirectionPointAdjustmentCmd.cs" />
+    <Compile Include="地图处理\RoadEndsProcessCmd.cs" />
+    <Compile Include="地图整饰\边饰\BufferQColorCmdXJ.cs" />
+    <Compile Include="地图整饰\边饰\CJMColorManualCmd.cs" />
+    <Compile Include="地图整饰\边饰\FrmCJM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\边饰\FrmCJM.designer.cs">
+      <DependentUpon>FrmCJM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图整饰\色带\SDMColorManualTool.cs" />
+    <Compile Include="地图整饰\色带\SDMCreateFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\色带\SDMCreateFrom.designer.cs">
+      <DependentUpon>SDMCreateFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图整饰\色带\FrmSDMColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\色带\FrmSDMColor.designer.cs">
+      <DependentUpon>FrmSDMColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图整饰\色带\FrmSDMColorAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\色带\FrmSDMColorAdd.designer.cs">
+      <DependentUpon>FrmSDMColorAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图整饰\色带\SDMColorCmd.cs" />
+    <Compile Include="地图整饰\边饰\FrmQBOUA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\边饰\FrmQBOUA.designer.cs">
+      <DependentUpon>FrmQBOUA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图整饰\边饰\NormalQJCmd.cs" />
+    <Compile Include="地图整饰\边饰\NormalQJForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\边饰\NormalQJForm.designer.cs">
+      <DependentUpon>NormalQJForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="境界普色\ColorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="境界普色\ColorForm.designer.cs">
+      <DependentUpon>ColorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="境界普色\ColorAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="境界普色\ColorAddForm.designer.cs">
+      <DependentUpon>ColorAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图处理\FrmRiverAutoGradual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图处理\FrmRiverAutoGradual.designer.cs">
+      <DependentUpon>FrmRiverAutoGradual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="境界普色\ZoneColorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="境界普色\ZoneColorForm.designer.cs">
+      <DependentUpon>ZoneColorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图处理\HydroAlgorithm.cs" />
+    <Compile Include="地图处理\RiverAutoGradual.cs" />
+    <Compile Include="地图处理\RiverAutoGradualCmd.cs" />
+    <Compile Include="境界普色\ZoneColorCmd.cs" />
+    <Compile Include="地图整饰\位置图\AddFigureMap.cs" />
+    <Compile Include="地图整饰\位置图\AddFigureMapCmdXJ.cs" />
+    <Compile Include="地图整饰\位置图\FrmFigureMapSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\位置图\FrmFigureMapSet.designer.cs">
+      <DependentUpon>FrmFigureMapSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图整饰\图例\AnnoGeometryHelper.cs" />
+    <Compile Include="地图整饰\图例\FrmLengendSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\图例\FrmLengendSet.designer.cs">
+      <DependentUpon>FrmLengendSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图整饰\图名\FrmMapNameset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\图名\FrmMapNameset.designer.cs">
+      <DependentUpon>FrmMapNameset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图整饰\图例\FrmXmlSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\图例\FrmXmlSave.designer.cs">
+      <DependentUpon>FrmXmlSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图整饰\图例\LengendDyCreateCmd.cs" />
+    <Compile Include="地图整饰\MapLayoutHelperLH.cs" />
+    <Compile Include="地图整饰\图名\MapNameSetCmd.cs" />
+    <Compile Include="地图整饰\图廓线定位\FrmMapLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\图廓线定位\FrmMapLine.Designer.cs">
+      <DependentUpon>FrmMapLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图整饰\图廓线定位\FrmMapLineCmd.cs" />
+    <Compile Include="地图整饰\指北针\CompassCmd.cs" />
+    <Compile Include="地图整饰\指北针\FrmCompassSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\指北针\FrmCompassSet.designer.cs">
+      <DependentUpon>FrmCompassSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图整饰\整饰要素编辑\MapElementMoveCmd.cs" />
+    <Compile Include="地图整饰\整饰要素编辑\MapElementRepRuleEditor.cs" />
+    <Compile Include="地图整饰\比例尺\FrmScaleBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\比例尺\FrmScaleBar.designer.cs">
+      <DependentUpon>FrmScaleBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图整饰\比例尺\ScaleBarCmd.cs" />
+    <Compile Include="地图整饰\网格线\FrmGridLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\网格线\FrmGridLine.designer.cs">
+      <DependentUpon>FrmGridLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图整饰\网格线\FrmMapGridCmd.cs" />
+    <Compile Include="地图整饰\花边\FootBorderCmd.cs" />
+    <Compile Include="地图整饰\花边\FrmFootBorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图整饰\花边\FrmFootBorder.designer.cs">
+      <DependentUpon>FrmFootBorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图输出\DataMapExportCmd.cs" />
+    <Compile Include="地图输出\FrmExportDataMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图输出\FrmExportDataMap.designer.cs">
+      <DependentUpon>FrmExportDataMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图输出\MapExportHelper.cs" />
+    <Compile Include="地图输出\MapView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图输出\MapView.designer.cs">
+      <DependentUpon>MapView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="实用工具\DataSymbolAndAnnotationUpdateCmd.cs" />
+    <Compile Include="实用工具\DataSymbolAndAnnotationUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="实用工具\DataSymbolAndAnnotationUpdateForm.designer.cs">
+      <DependentUpon>DataSymbolAndAnnotationUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据获取\ThematicDataClass.cs" />
+    <Compile Include="数据获取\地图定位\RegionNameLocationCmd.cs" />
+    <Compile Include="数据获取\地图定位\RegionNameLocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据获取\地图定位\RegionNameLocationForm.designer.cs">
+      <DependentUpon>RegionNameLocationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据获取\数据裁切\DataBaseDownLoadCmd.cs" />
+    <Compile Include="数据获取\数据裁切\DataBaseDownLoadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据获取\数据裁切\DataBaseDownLoadForm.designer.cs">
+      <DependentUpon>DataBaseDownLoadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据获取\数据裁切\DataServerClass.cs" />
+    <Compile Include="数据获取\数据裁切\RasterDataServer.cs" />
+    <Compile Include="数据获取\数据符号化\DataBaseStructUpgradeCmd.cs" />
+    <Compile Include="数据获取\数据符号化\DataBaseStructUpgradeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据获取\数据符号化\DataBaseStructUpgradeForm.designer.cs">
+      <DependentUpon>DataBaseStructUpgradeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据获取\数据裁切\SetSpatialReferenceCommand.cs" />
+    <Compile Include="数据获取\地图定位\ClipElement.cs" />
+    <Compile Include="数据获取\底图服务\FrmBaseMapSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据获取\底图服务\FrmBaseMapSet.designer.cs">
+      <DependentUpon>FrmBaseMapSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据获取\底图服务\LoadBaseMapCmd.cs" />
+    <Compile Include="数据获取\地图定位\PageSizeRules.cs" />
+    <Compile Include="数据获取\地图定位\CommonLocationMethods.cs" />
+    <Compile Include="数据获取\地图定位\CoordinateLocationCmd.cs" />
+    <Compile Include="数据获取\地图定位\FrmEleMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据获取\地图定位\FrmEleMove.designer.cs">
+      <DependentUpon>FrmEleMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据获取\地图定位\LocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据获取\地图定位\LocationForm.designer.cs">
+      <DependentUpon>LocationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据获取\地图定位\MapPageMoveCmd.cs" />
+    <Compile Include="数据获取\地图定位\MouseClickLocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据获取\地图定位\MouseClickLocationForm.designer.cs">
+      <DependentUpon>MouseClickLocationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据获取\地图定位\MouseClickLocationTool.cs" />
+    <Compile Include="数据获取\地图定位\PlaceNameLocationCmd.cs" />
+    <Compile Include="数据获取\地图定位\PlaceNameLocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据获取\地图定位\PlaceNameLocationForm.designer.cs">
+      <DependentUpon>PlaceNameLocationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据获取\地图定位\ShpLocationCmd.cs" />
+    <Compile Include="数据获取\地图定位\ShpLocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据获取\地图定位\ShpLocationForm.designer.cs">
+      <DependentUpon>ShpLocationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据获取\数据裁切\SetSpatialReferenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据获取\数据裁切\SetSpatialReferenceForm.designer.cs">
+      <DependentUpon>SetSpatialReferenceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据选取\UnselectFeatureTool.cs" />
+    <Compile Include="数据选取\UnselectFeatureToolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据选取\UnselectFeatureToolForm.designer.cs">
+      <DependentUpon>UnselectFeatureToolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="晕渲\AddHillShadingCmd.cs" />
+    <Compile Include="晕渲\AddHillShadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="晕渲\AddHillShadingForm.Designer.cs">
+      <DependentUpon>AddHillShadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="晕渲\ExtractLandFormsCmd.cs" />
+    <Compile Include="晕渲\HillShading.cs" />
+    <Compile Include="晕渲\LandForms.cs" />
+    <Compile Include="晕渲\ListviewClass.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="注记编辑\冲突\AnnoConflictTool.cs" />
+    <Compile Include="注记编辑\冲突\FrmAnnoConflict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="注记编辑\冲突\FrmAnnoConflict.Designer.cs">
+      <DependentUpon>FrmAnnoConflict.cs</DependentUpon>
+    </Compile>
+    <Compile Include="注记编辑\冲突\FrmAnnoCfAd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="注记编辑\冲突\FrmAnnoCfAd.Designer.cs">
+      <DependentUpon>FrmAnnoCfAd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="注记编辑\编辑\AnnoHorToVer.cs" />
+    <Compile Include="注记编辑\编辑\AnnoHorToVerCmd.cs" />
+    <Compile Include="注记编辑\编辑\AnnotationClassifiedModifyCmd.cs" />
+    <Compile Include="注记编辑\编辑\AnnotationClassifiedModifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="注记编辑\编辑\AnnotationClassifiedModifyForm.designer.cs">
+      <DependentUpon>AnnotationClassifiedModifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="注记编辑\编辑\FrmAnnoAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="注记编辑\编辑\FrmAnnoAttribute.Designer.cs">
+      <DependentUpon>FrmAnnoAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="注记编辑\编辑\AnnotationFontSizeAdjustCmd.cs" />
+    <Compile Include="注记编辑\编辑\AnnotationFontSizeAdjustForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="注记编辑\编辑\AnnotationFontSizeAdjustForm.Designer.cs">
+      <DependentUpon>AnnotationFontSizeAdjustForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="注记编辑\编辑\AnnotationChangeCmd.cs" />
+    <Compile Include="注记编辑\选择\AnnoAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="注记编辑\选择\AnnoAttribute.Designer.cs">
+      <DependentUpon>AnnoAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="注记编辑\创建\AnnoBreakFaceToNorth.cs" />
+    <Compile Include="注记编辑\AnnoFunc.cs" />
+    <Compile Include="注记编辑\AnnoHelper.cs" />
+    <Compile Include="注记编辑\编辑\AnnoLeaderLineAddTool.cs" />
+    <Compile Include="注记编辑\编辑\AnnoRotation.cs" />
+    <Compile Include="注记编辑\创建\AnnoRule.cs" />
+    <Compile Include="注记编辑\选择\AnnoSelect.cs" />
+    <Compile Include="注记编辑\创建\AnnotationAdd.cs" />
+    <Compile Include="注记编辑\创建\FrmAnnoLyr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="注记编辑\创建\FrmAnnoLyr.designer.cs">
+      <DependentUpon>FrmAnnoLyr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="注记编辑\选择\FrmAnnoRuleSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="注记编辑\选择\FrmAnnoRuleSet.designer.cs">
+      <DependentUpon>FrmAnnoRuleSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="注记编辑\创建\MaplexAnnotateCmd.cs" />
+    <Compile Include="注记编辑\创建\MaplexAnnotateCreate.cs" />
+    <Compile Include="注记编辑\创建\MaplexAttributeOfFeature.cs" />
+    <Compile Include="地图处理\SymbolConflictProcess.cs" />
+    <Compile Include="地图处理\SymbolManualProcessCmd.cs" />
+    <Compile Include="地图处理\SymbolProcessCmd.cs" />
+    <Compile Include="系统设置\DEMDataSetCmd.cs" />
+    <Compile Include="系统设置\ExportMapServerSetClass.cs" />
+    <Compile Include="系统设置\FormDataBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统设置\FormDataBase.Designer.cs">
+      <DependentUpon>FormDataBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统设置\FormDCDData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统设置\FormDCDData.Designer.cs">
+      <DependentUpon>FormDCDData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统设置\FormDEMData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统设置\FormDEMData.Designer.cs">
+      <DependentUpon>FormDEMData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统设置\FormLocationData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统设置\FormLocationData.Designer.cs">
+      <DependentUpon>FormLocationData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统设置\FormMapData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统设置\FormMapData.Designer.cs">
+      <DependentUpon>FormMapData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统设置\FormMapServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统设置\FormMapServices.Designer.cs">
+      <DependentUpon>FormMapServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统设置\FormThematic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统设置\FormThematic.Designer.cs">
+      <DependentUpon>FormThematic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统设置\FormThematicData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统设置\FormThematicData.Designer.cs">
+      <DependentUpon>FormThematicData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统设置\FrmIPSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统设置\FrmIPSet.Designer.cs">
+      <DependentUpon>FrmIPSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统设置\FrmMapServerSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统设置\FrmMapServerSet.designer.cs">
+      <DependentUpon>FrmMapServerSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统设置\MapSouceDataSetCmd.cs" />
+    <Compile Include="系统设置\LocationDataSetCmd.cs" />
+    <Compile Include="系统设置\MainDataSetCmd.cs" />
+    <Compile Include="系统设置\MapDataSetCmd.cs" />
+    <Compile Include="系统设置\ThematicDataSetCmd.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="专题工具\行政区普色\税源\FrmClass.resx">
+      <DependentUpon>FrmClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="专题工具\行政区普色\税源\FrmClassDetail.resx">
+      <DependentUpon>FrmClassDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="右键菜单\AttributeTable\AttributeTableForm.resx">
+      <DependentUpon>AttributeTableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图处理\FrmBridgeSize.resx">
+      <DependentUpon>FrmBridgeSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图处理\FrmMaskingSet.resx">
+      <DependentUpon>FrmMaskingSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图处理\JustifyCulvertForm.resx">
+      <DependentUpon>JustifyCulvertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\单侧色带\FrmSDMColor.resx">
+      <DependentUpon>FrmSDMColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\单侧色带\FrmSDMColorAdd.resx">
+      <DependentUpon>FrmSDMColorAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\单侧色带\FrmSideSDM.resx">
+      <DependentUpon>FrmSideSDM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\图例\FrmLgSet.resx">
+      <DependentUpon>FrmLgSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="境界跳绘\FrmBOULTHSet.resx">
+      <DependentUpon>FrmBOULTHSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实用工具\AddThematicDataForm.resx">
+      <DependentUpon>AddThematicDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实用工具\CheckSymbolConflictForm.resx">
+      <DependentUpon>CheckSymbolConflictForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实用工具\ClipDataByInnerborderForm.resx">
+      <DependentUpon>ClipDataByInnerborderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实用工具\DataSearchForm.resx">
+      <DependentUpon>DataSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="引线标注\FrmLabelAd.resx">
+      <DependentUpon>FrmLabelAd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="引线标注\属性标注\FrmAttriPropertySet.resx">
+      <DependentUpon>FrmAttriPropertySet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="引线标注\气泡标注\FrmLableBall.resx">
+      <DependentUpon>FrmLableBall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="引线标注\图形标注\FrmLabelLineSet.resx">
+      <DependentUpon>FrmLabelLineSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="引线标注\FrmLbExport.resx">
+      <DependentUpon>FrmLbExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="引线标注\图形标注\FrmLabelPropertySet.resx">
+      <DependentUpon>FrmLabelPropertySet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="引线标注\SelectBySQLDialog.resx">
+      <DependentUpon>SelectBySQLDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="引线标注\属性标注\FrmAttributeTool.resx">
+      <DependentUpon>FrmAttributeTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="引线标注\属性标注\FrmLabelLyr.resx">
+      <DependentUpon>FrmLabelLyr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="引线标注\属性标注\FrmLabelInfo.resx">
+      <DependentUpon>FrmLabelInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="引线标注\常规折线标注\FrmPolyLineSet.resx">
+      <DependentUpon>FrmPolyLineSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="引线标注\常规折线标注\FrmPolyLinePropertySet.resx">
+      <DependentUpon>FrmPolyLinePropertySet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="引线标注\注记表达式\FrmAnnoMap.resx">
+      <DependentUpon>FrmAnnoMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="引线标注\注记表达式\FrmLbExpress.resx">
+      <DependentUpon>FrmLbExpress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="引线标注\符号标注\FrmSymTool.resx">
+      <DependentUpon>FrmSymTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="引线标注\符号标注\FrmSymLabelProperty.resx">
+      <DependentUpon>FrmSymLabelProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据获取\地图定位\AdministrativeRegeionLocationForm.resx">
+      <DependentUpon>AdministrativeRegeionLocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据获取\地图定位\FrmMapSizeInfo.resx">
+      <DependentUpon>FrmMapSizeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据选取\FeatureSelectForm.resx">
+      <DependentUpon>FeatureSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据选取\POI选取\POISelectionForm.resx">
+      <DependentUpon>POISelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据选取\POI选取\POISelectionFormEx.resx">
+      <DependentUpon>POISelectionFormEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="一键成图\FrmAutoMap.resx">
+      <DependentUpon>FrmAutoMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="一键成图\FrmBOUASet.resx">
+      <DependentUpon>FrmBOUASet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="一键成图\FrmNameSet.resx">
+      <DependentUpon>FrmNameSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="一键成图\FrmSDMSet.resx">
+      <DependentUpon>FrmSDMSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="专题标绘\地震\CreateEarthQuakeWaveForm.resx">
+      <DependentUpon>CreateEarthQuakeWaveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="右键菜单\LayerLabelSetForm.resx">
+      <DependentUpon>LayerLabelSetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="右键菜单\LayerSelectableManageForm.resx">
+      <DependentUpon>LayerSelectableManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="右键菜单\ReferenceScaleDialog.resx">
+      <DependentUpon>ReferenceScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\色带\SDMCreateFrom.resx">
+      <DependentUpon>SDMCreateFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\色带\FrmSDMColor.resx">
+      <DependentUpon>FrmSDMColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\色带\FrmSDMColorAdd.resx">
+      <DependentUpon>FrmSDMColorAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\边饰\FrmCJM.resx">
+      <DependentUpon>FrmCJM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\边饰\FrmQBOUA.resx">
+      <DependentUpon>FrmQBOUA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\边饰\NormalQJForm.resx">
+      <DependentUpon>NormalQJForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="境界普色\ColorForm.resx">
+      <DependentUpon>ColorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="境界普色\ColorAddForm.resx">
+      <DependentUpon>ColorAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图处理\FrmRiverAutoGradual.resx">
+      <DependentUpon>FrmRiverAutoGradual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="境界普色\ZoneColorForm.resx">
+      <DependentUpon>ZoneColorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\位置图\FrmFigureMapSet.resx">
+      <DependentUpon>FrmFigureMapSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\图例\FrmLengendSet.resx">
+      <DependentUpon>FrmLengendSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\图名\FrmMapNameset.resx">
+      <DependentUpon>FrmMapNameset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\图例\FrmXmlSave.resx">
+      <DependentUpon>FrmXmlSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\图廓线定位\FrmMapLine.resx">
+      <DependentUpon>FrmMapLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\指北针\FrmCompassSet.resx">
+      <DependentUpon>FrmCompassSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\比例尺\FrmScaleBar.resx">
+      <DependentUpon>FrmScaleBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\网格线\FrmGridLine.resx">
+      <DependentUpon>FrmGridLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图整饰\花边\FrmFootBorder.resx">
+      <DependentUpon>FrmFootBorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图输出\FrmExportDataMap.resx">
+      <DependentUpon>FrmExportDataMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图输出\MapView.resx">
+      <DependentUpon>MapView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实用工具\DataSymbolAndAnnotationUpdateForm.resx">
+      <DependentUpon>DataSymbolAndAnnotationUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据获取\地图定位\RegionNameLocationForm.resx">
+      <DependentUpon>RegionNameLocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据获取\底图服务\FrmBaseMapSet.resx">
+      <DependentUpon>FrmBaseMapSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据获取\地图定位\FrmEleMove.resx">
+      <DependentUpon>FrmEleMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据获取\地图定位\LocationForm.resx">
+      <DependentUpon>LocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据获取\地图定位\MouseClickLocationForm.resx">
+      <DependentUpon>MouseClickLocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据获取\地图定位\PlaceNameLocationForm.resx">
+      <DependentUpon>PlaceNameLocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据获取\地图定位\ShpLocationForm.resx">
+      <DependentUpon>ShpLocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据获取\数据裁切\DataBaseDownLoadForm.resx">
+      <DependentUpon>DataBaseDownLoadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据获取\数据符号化\DataBaseStructUpgradeForm.resx">
+      <DependentUpon>DataBaseStructUpgradeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据获取\数据裁切\SetSpatialReferenceForm.resx">
+      <DependentUpon>SetSpatialReferenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据选取\UnselectFeatureToolForm.resx">
+      <DependentUpon>UnselectFeatureToolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="晕渲\AddHillShadingForm.resx">
+      <DependentUpon>AddHillShadingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="注记编辑\冲突\FrmAnnoConflict.resx">
+      <DependentUpon>FrmAnnoConflict.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="注记编辑\冲突\FrmAnnoCfAd.resx">
+      <DependentUpon>FrmAnnoCfAd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="注记编辑\编辑\AnnotationClassifiedModifyForm.resx">
+      <DependentUpon>AnnotationClassifiedModifyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="注记编辑\编辑\FrmAnnoAttribute.resx">
+      <DependentUpon>FrmAnnoAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="注记编辑\编辑\AnnotationFontSizeAdjustForm.resx">
+      <DependentUpon>AnnotationFontSizeAdjustForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="注记编辑\选择\AnnoAttribute.resx">
+      <DependentUpon>AnnoAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="注记编辑\创建\FrmAnnoLyr.resx">
+      <DependentUpon>FrmAnnoLyr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="注记编辑\选择\FrmAnnoRuleSet.resx">
+      <DependentUpon>FrmAnnoRuleSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统设置\FormDataBase.resx">
+      <DependentUpon>FormDataBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统设置\FormDCDData.resx">
+      <DependentUpon>FormDCDData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统设置\FormDEMData.resx">
+      <DependentUpon>FormDEMData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统设置\FormLocationData.resx">
+      <DependentUpon>FormLocationData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统设置\FormMapData.resx">
+      <DependentUpon>FormMapData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统设置\FormMapServices.resx">
+      <DependentUpon>FormMapServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统设置\FormThematic.resx">
+      <DependentUpon>FormThematic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统设置\FormThematicData.resx">
+      <DependentUpon>FormThematicData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统设置\FrmIPSet.resx">
+      <DependentUpon>FrmIPSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统设置\FrmMapServerSet.resx">
+      <DependentUpon>FrmMapServerSet.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\页面设置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SMGI.Common\SMGI.Common.csproj">
+      <Project>{6CF02365-2D92-427B-92DB-1C55DAEEB1BF}</Project>
+      <Name>SMGI.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="move.cur" />
+    <EmbeddedResource Include="Move.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

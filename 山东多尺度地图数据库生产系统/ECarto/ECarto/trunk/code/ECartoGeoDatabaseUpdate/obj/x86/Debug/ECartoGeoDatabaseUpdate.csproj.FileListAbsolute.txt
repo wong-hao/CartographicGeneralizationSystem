@@ -1,0 +1,13 @@
+D:\ECarto\trunk\bin\基础地理信息数据库更新协同作业系统.exe
+D:\ECarto\trunk\bin\基础地理信息数据库更新协同作业系统.pdb
+D:\ECarto\trunk\code\ECartoGeoDatabaseUpdate\obj\x86\Debug\eCarto.Properties.Resources.resources
+D:\ECarto\trunk\code\ECartoGeoDatabaseUpdate\obj\x86\Debug\ECartoGeoDatabaseUpdate.csproj.GenerateResource.Cache
+D:\ECarto\trunk\code\ECartoGeoDatabaseUpdate\obj\x86\Debug\基础地理信息数据库更新协同作业系统.exe
+D:\ECarto\trunk\code\ECartoGeoDatabaseUpdate\obj\x86\Debug\基础地理信息数据库更新协同作业系统.pdb
+D:\工作\ECarto\ECarto\trunk\bin\基础地理信息数据库更新协同作业系统.exe
+D:\工作\ECarto\ECarto\trunk\bin\基础地理信息数据库更新协同作业系统.pdb
+D:\工作\ECarto\ECarto\trunk\code\ECartoGeoDatabaseUpdate\obj\x86\Debug\ECartoGeoDatabaseUpdate.csprojResolveAssemblyReference.cache
+D:\工作\ECarto\ECarto\trunk\code\ECartoGeoDatabaseUpdate\obj\x86\Debug\eCarto.Properties.Resources.resources
+D:\工作\ECarto\ECarto\trunk\code\ECartoGeoDatabaseUpdate\obj\x86\Debug\ECartoGeoDatabaseUpdate.csproj.GenerateResource.Cache
+D:\工作\ECarto\ECarto\trunk\code\ECartoGeoDatabaseUpdate\obj\x86\Debug\基础地理信息数据库更新协同作业系统.exe
+D:\工作\ECarto\ECarto\trunk\code\ECartoGeoDatabaseUpdate\obj\x86\Debug\基础地理信息数据库更新协同作业系统.pdb

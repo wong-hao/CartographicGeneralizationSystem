@@ -1,0 +1,14 @@
+D:\ECarto\trunk\bin\信息化测绘生产技术平台.exe
+D:\ECarto\trunk\bin\信息化测绘生产技术平台.pdb
+D:\ECarto\trunk\code\eCarto\obj\x86\Debug\信息化测绘生产技术平台.Properties.Resources.resources
+D:\ECarto\trunk\code\eCarto\obj\x86\Debug\ECartoPlatform.csproj.GenerateResource.Cache
+D:\ECarto\trunk\code\eCarto\obj\x86\Debug\信息化测绘生产技术平台.exe
+D:\ECarto\trunk\code\eCarto\obj\x86\Debug\信息化测绘生产技术平台.pdb
+D:\ECarto\trunk\code\eCarto\obj\x86\Debug\ECartoPlatform.csprojResolveAssemblyReference.cache
+D:\工作\ECarto\ECarto\trunk\bin\信息化测绘生产技术平台.exe
+D:\工作\ECarto\ECarto\trunk\bin\信息化测绘生产技术平台.pdb
+D:\工作\ECarto\ECarto\trunk\code\eCarto\obj\x86\Debug\ECartoPlatform.csprojResolveAssemblyReference.cache
+D:\工作\ECarto\ECarto\trunk\code\eCarto\obj\x86\Debug\信息化测绘生产技术平台.Properties.Resources.resources
+D:\工作\ECarto\ECarto\trunk\code\eCarto\obj\x86\Debug\ECartoPlatform.csproj.GenerateResource.Cache
+D:\工作\ECarto\ECarto\trunk\code\eCarto\obj\x86\Debug\信息化测绘生产技术平台.exe
+D:\工作\ECarto\ECarto\trunk\code\eCarto\obj\x86\Debug\信息化测绘生产技术平台.pdb

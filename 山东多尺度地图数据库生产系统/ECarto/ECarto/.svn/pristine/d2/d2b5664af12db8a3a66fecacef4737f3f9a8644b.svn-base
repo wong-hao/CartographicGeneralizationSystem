@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Template>
+  <Caption>湖南快速出图系统</Caption>
+  <ClassName>快速地图制图</ClassName>
+  <CommandLayout>Commands.xml</CommandLayout>
+  <Content>
+    <SkinStyle>Money Twins</SkinStyle>
+    <SatrtImage>启动图片.jpg</SatrtImage>
+    <EnvironmentSettings>EnvironmentSettings.xml</EnvironmentSettings>
+    <Expertise>Expertise.xml</Expertise>
+    <PageSizeRules>PageSizeRule.mdb</PageSizeRules>
+    <PlaceNameSimplification>PlaceNameSimplification.mdb</PlaceNameSimplification>
+    <MapMargin>MapMargin.xml</MapMargin>
+    <RuleDataBase>规则对照.mdb</RuleDataBase>
+    <ThematicRule>RuleFoot.gdb</ThematicRule>
+    <FieldNameMapping>FNConfig.xml</FieldNameMapping>
+    <ProvincePAC>43</ProvincePAC>
+  </Content>
+</Template>

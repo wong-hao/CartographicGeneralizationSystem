@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<POISelectRule>
+  <POISelectInfo>
+    <Layer LayerName="AGNP" Rule="省驻地" Percent="1" Checked="True" />
+    <Layer LayerName="AGNP" Rule="自治州驻地" Percent="1" Checked="True" />
+    <Layer LayerName="AGNP" Rule="市驻地" Percent="1" Checked="True" />
+    <Layer LayerName="AGNP" Rule="县驻地" Percent="1" Checked="True" />
+    <Layer LayerName="AGNP" Rule="乡镇驻地" Percent="0.8" Checked="True" />
+    <Layer LayerName="AGNP" Rule="村驻地" Percent="0.6" Checked="True" />
+    <Layer LayerName="AGNP" Rule="小区名" Percent="0.6" Checked="True" />
+    <Layer LayerName="AGNP" Rule="自然村" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="党政机关名" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="企事业单位名" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="农林牧渔场名" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="经济开发区名" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="农林牧渔场名" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="学校" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="医院" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="科技馆博物馆" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="公园" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="陵园" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="动物园" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="植物园" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="露天体育场" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="高尔夫球场" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="体育馆" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="古迹遗址" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="纪念碑" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="钟鼓楼" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="文物碑石" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="庙宇" Percent="0.6" Checked="True" />
+    <Layer LayerName="RFCP" Rule="清真寺" Percent="0.6" Checked="True" />
+    <Layer LayerName="AANP" Rule="山体名" Percent="0.6" Checked="True" />
+    <Layer LayerName="AANP" Rule="山峰名" Percent="0.6" Checked="True" />
+    <Layer LayerName="LFCP" Rule="火车站" Percent="0.6" Checked="True" />
+    <Layer LayerName="LFCP" Rule="高铁站" Percent="0.6" Checked="True" />
+    <Layer LayerName="LFCP" Rule="地铁站" Percent="0.6" Checked="True" />
+    <Layer LayerName="LFCP" Rule="城铁站磁悬浮站" Percent="0.6" Checked="True" />
+    <Layer LayerName="LFCP" Rule="长途汽车站" Percent="0.6" Checked="True" />
+    <Layer LayerName="LFCP" Rule="服务区" Percent="0.6" Checked="True" />
+    <Layer LayerName="LFCP" Rule="收费站" Percent="0.6" Checked="True" />
+    <Layer LayerName="LFCP" Rule="互通" Percent="0.6" Checked="True" />
+    <Layer LayerName="LFCP" Rule="水运港客运站" Percent="0.6" Checked="True" />
+    <Layer LayerName="LFCP" Rule="机场" Percent="0.6" Checked="True" />
+  </POISelectInfo>
+</POISelectRule>

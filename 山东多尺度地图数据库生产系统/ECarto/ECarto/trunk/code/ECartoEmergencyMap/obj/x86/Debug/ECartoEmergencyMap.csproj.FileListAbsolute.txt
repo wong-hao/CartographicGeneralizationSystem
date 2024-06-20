@@ -1,0 +1,14 @@
+D:\ECarto\trunk\bin\快速地图制图系统.exe
+D:\ECarto\trunk\bin\快速地图制图系统.pdb
+D:\ECarto\trunk\code\ECartoEmergencyMap\obj\x86\Debug\eCarto.Properties.Resources.resources
+D:\ECarto\trunk\code\ECartoEmergencyMap\obj\x86\Debug\ECartoEmergencyMap.csproj.GenerateResource.Cache
+D:\ECarto\trunk\code\ECartoEmergencyMap\obj\x86\Debug\快速地图制图系统.exe
+D:\ECarto\trunk\code\ECartoEmergencyMap\obj\x86\Debug\快速地图制图系统.pdb
+D:\ECarto\trunk\code\ECartoEmergencyMap\obj\x86\Debug\ECartoEmergencyMap.csprojResolveAssemblyReference.cache
+D:\工作\ECarto\ECarto\trunk\bin\快速地图制图系统.exe
+D:\工作\ECarto\ECarto\trunk\bin\快速地图制图系统.pdb
+D:\工作\ECarto\ECarto\trunk\code\ECartoEmergencyMap\obj\x86\Debug\eCarto.Properties.Resources.resources
+D:\工作\ECarto\ECarto\trunk\code\ECartoEmergencyMap\obj\x86\Debug\ECartoEmergencyMap.csproj.GenerateResource.Cache
+D:\工作\ECarto\ECarto\trunk\code\ECartoEmergencyMap\obj\x86\Debug\快速地图制图系统.exe
+D:\工作\ECarto\ECarto\trunk\code\ECartoEmergencyMap\obj\x86\Debug\快速地图制图系统.pdb
+D:\工作\ECarto\ECarto\trunk\code\ECartoEmergencyMap\obj\x86\Debug\ECartoEmergencyMap.csprojResolveAssemblyReference.cache

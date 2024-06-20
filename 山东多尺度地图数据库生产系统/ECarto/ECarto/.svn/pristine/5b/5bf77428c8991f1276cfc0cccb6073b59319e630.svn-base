@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{992F8CEB-3065-4111-BD96-E860DF18437A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SMGI.Plugin.MapGeneralization</RootNamespace>
+    <AssemblyName>SMGI.Plugin.MapGeneralization</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Release\Plugins\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Utils.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AnalysisTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Analyst3DTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CartographyTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ConversionTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataInteroperabilityTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataManagementTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRaster, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.EditingTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Editor, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.EngineCore, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Framework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoAnalyst, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessing, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SpatialAnalystTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SpatialStatisticsTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algrithm\SimplifyByDTCharacters.cs" />
+    <Compile Include="Algrithm\Index\Envelope.cs" />
+    <Compile Include="Algrithm\Index\RTree.cs" />
+    <Compile Include="Algrithm\Index\RTreeNode.cs" />
+    <Compile Include="Algrithm\LineConflictDetect.cs" />
+    <Compile Include="Algrithm\rtree\ILog.cs" />
+    <Compile Include="Algrithm\rtree\Node.cs" />
+    <Compile Include="Algrithm\rtree\Point.cs" />
+    <Compile Include="Algrithm\rtree\Rectangle.cs" />
+    <Compile Include="Algrithm\rtree\RTree.cs" />
+    <Compile Include="CreateAdjacencyRelation.cs" />
+    <Compile Include="DangleCheck.cs" />
+    <Compile Include="PolygonComprehensive.cs" />
+    <Compile Include="Process.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Process.Designer.cs">
+      <DependentUpon>Process.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PseudoCheck.cs" />
+    <Compile Include="PseudoProcessBigdata.cs" />
+    <Compile Include="地图综合\LineSimplifyCharactersTool.cs" />
+    <Compile Include="地图综合\FrmSimplifySet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图综合\FrmSimplifySet.Designer.cs">
+      <DependentUpon>FrmSimplifySet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemporaryLayerAddCmd.cs" />
+    <Compile Include="TxtRecordFile.cs" />
+    <Compile Include="拓扑化简\FrmTopErrors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="拓扑化简\FrmTopErrors.Designer.cs">
+      <DependentUpon>FrmTopErrors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="拓扑化简\FrmTopolgy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="拓扑化简\FrmTopolgy.Designer.cs">
+      <DependentUpon>FrmTopolgy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="拓扑化简\GeneralizeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="拓扑化简\GeneralizeForm.designer.cs">
+      <DependentUpon>GeneralizeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="拓扑化简\SimplifyToleranceFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="拓扑化简\SimplifyToleranceFrm.Designer.cs">
+      <DependentUpon>SimplifyToleranceFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="拓扑化简\TopolgyCreateCmd.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="拓扑化简\TopolgyDeleteCmd.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="拓扑化简\TopolgyEdgeSelect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="拓扑化简\TopolgyEdgeSimifyAutoCmd2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="拓扑化简\TopolgyEdgeSimpifyAutoCmd.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="拓扑化简\TopolgyEdgeSimpifyCmd.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="拓扑化简\TopolgyEdgeSimpifyPreCmd.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="拓扑化简\TopolgyHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="拓扑化简\TopolgyIntiCmd.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="拓扑化简\TopolgyReshapeEdge.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="拓扑化简\TopolgyReshapePolyline.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="拓扑化简\TopolgySimpilfyCmd.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="拓扑化简\TopolgySimpilfyTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="拓扑化简\TopoSimpilfyTool.cs" />
+    <Compile Include="拓扑化简\TopSimplefyClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="拓扑处理\LineConflictCheckCmd.cs" />
+    <Compile Include="地图综合\FeatureSimplifyCmd.cs" />
+    <Compile Include="地图综合\FrmSimplify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图综合\FrmSimplify.Designer.cs">
+      <DependentUpon>FrmSimplify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="地图综合\EnvironmentHelper.cs" />
+    <Compile Include="地图综合\HydroLineSelectCmd.cs" />
+    <Compile Include="地图综合\LayerSelectWithGeneralizeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图综合\LayerSelectWithGeneralizeForm.Designer.cs">
+      <DependentUpon>LayerSelectWithGeneralizeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图综合\POIAutoSelection.cs" />
+    <Compile Include="地图综合\POIHelper.cs" />
+    <Compile Include="地图综合\POIManualSelection.cs" />
+    <Compile Include="地图综合\POISelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="地图综合\POISelectionForm.Designer.cs">
+      <DependentUpon>POISelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="地图综合\PolygonGeneralizeCmd.cs" />
+    <Compile Include="地图综合\PolylineGeneralizeCmd.cs" />
+    <Compile Include="拓扑处理\DangleProcessCmd.cs" />
+    <Compile Include="拓扑处理\FrmLineConficlt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="拓扑处理\FrmLineConficlt.Designer.cs">
+      <DependentUpon>FrmLineConficlt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="拓扑处理\LayerSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="拓扑处理\LayerSelectForm.Designer.cs">
+      <DependentUpon>LayerSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="拓扑处理\LayerSelectWithFiedsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="拓扑处理\LayerSelectWithFiedsForm.Designer.cs">
+      <DependentUpon>LayerSelectWithFiedsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="拓扑处理\PseudoProcessCmd.cs" />
+    <Compile Include="拓扑处理\PseLayerSelectWithFiedsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="拓扑处理\PseLayerSelectWithFiedsForm.Designer.cs">
+      <DependentUpon>PseLayerSelectWithFiedsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="沟渠选取\CanalDangleDeleteTool.cs" />
+    <Compile Include="沟渠选取\CanalSelectTool.cs" />
+    <Compile Include="沟渠选取\CanalSelectToolWithMinStroke.cs" />
+    <Compile Include="沟渠选取\CanalStrokeTool.cs" />
+    <Compile Include="沟渠选取\FrmCanalGradeSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="沟渠选取\FrmCanalGradeSet.Designer.cs">
+      <DependentUpon>FrmCanalGradeSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="沟渠选取\FrmCanalSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="沟渠选取\FrmCanalSet.Designer.cs">
+      <DependentUpon>FrmCanalSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="沟渠选取\PlanarGraph.cs" />
+    <Compile Include="沟渠选取\TestPlanarGraphTool.cs" />
+    <Compile Include="沟渠选取\CanalGradualCmd.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Process.resx">
+      <DependentUpon>Process.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图综合\FrmSimplifySet.resx">
+      <DependentUpon>FrmSimplifySet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图综合\FrmSimplify.resx">
+      <DependentUpon>FrmSimplify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图综合\LayerSelectWithGeneralizeForm.resx">
+      <DependentUpon>LayerSelectWithGeneralizeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="地图综合\POISelectionForm.resx">
+      <DependentUpon>POISelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="拓扑化简\FrmTopErrors.resx">
+      <DependentUpon>FrmTopErrors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="拓扑化简\FrmTopolgy.resx">
+      <DependentUpon>FrmTopolgy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="拓扑化简\GeneralizeForm.resx">
+      <DependentUpon>GeneralizeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="拓扑化简\SimplifyToleranceFrm.resx">
+      <DependentUpon>SimplifyToleranceFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="拓扑处理\FrmLineConficlt.resx">
+      <DependentUpon>FrmLineConficlt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="拓扑处理\LayerSelectForm.resx">
+      <DependentUpon>LayerSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="拓扑处理\LayerSelectWithFiedsForm.resx">
+      <DependentUpon>LayerSelectWithFiedsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="拓扑处理\PseLayerSelectWithFiedsForm.resx">
+      <DependentUpon>PseLayerSelectWithFiedsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="沟渠选取\FrmCanalGradeSet.resx">
+      <DependentUpon>FrmCanalGradeSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="沟渠选取\FrmCanalSet.resx">
+      <DependentUpon>FrmCanalSet.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SMGI.Common\SMGI.Common.csproj">
+      <Project>{6CF02365-2D92-427B-92DB-1C55DAEEB1BF}</Project>
+      <Name>SMGI.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

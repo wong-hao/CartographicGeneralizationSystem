@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Template>
+  <Content>
+    <Server>
+      <IPAddress>172.16.34.171</IPAddress>
+      <UserName>sde</UserName>
+      <Password>123456</Password>
+    </Server>
+    <MapScale>179000</MapScale>
+    <DatabaseName>jxdcd25w</DatabaseName>
+    <BaseMap>一般</BaseMap>
+    <MapTemplate>25万</MapTemplate>
+    <PageSize>
+      <Width>1092</Width>
+      <Height>787</Height>
+    </PageSize>
+    <MapSizeStyle>空</MapSizeStyle>
+    <MapSize>
+      <Width>1070</Width>
+      <Height>760</Height>
+    </MapSize>
+    <MapInnerSize>
+      <Width>970</Width>
+      <Height>620</Height>
+    </MapInnerSize>
+    <MapInterval>15</MapInterval>
+  </Content>
+</Template>

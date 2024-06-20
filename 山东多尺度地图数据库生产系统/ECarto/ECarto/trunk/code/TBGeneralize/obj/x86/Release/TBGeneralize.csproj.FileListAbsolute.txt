@@ -1,0 +1,7 @@
+D:\ECarto\trunk\Release\bin\TBGeneralize.exe.config
+D:\ECarto\trunk\Release\bin\TBGeneralize.exe
+D:\ECarto\trunk\Release\bin\TBGeneralize.pdb
+D:\ECarto\trunk\code\TBGeneralize\obj\x86\Release\TBGeneralize.Form1.resources
+D:\ECarto\trunk\code\TBGeneralize\obj\x86\Release\TBGeneralize.csproj.GenerateResource.Cache
+D:\ECarto\trunk\code\TBGeneralize\obj\x86\Release\TBGeneralize.exe
+D:\ECarto\trunk\code\TBGeneralize\obj\x86\Release\TBGeneralize.pdb

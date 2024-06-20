@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Template>
+  <Content>
+    <Server>
+      <IPAddress>172.16.34.171</IPAddress>
+      <UserName>sde</UserName>
+      <Password>123456</Password>
+    </Server>
+    <MapScale>50000</MapScale>
+    <DatabaseName>temp_hn5w</DatabaseName>
+    <BaseMap>一般</BaseMap>
+    <MapTemplate>5万</MapTemplate>
+    <PageSize>
+      <Width>787</Width>
+      <Height>1092</Height>
+    </PageSize>
+    <MapSizeStyle>空</MapSizeStyle>
+    <MapSize>
+      <Width>760</Width>
+      <Height>1070</Height>
+    </MapSize>
+    <MapInnerSize>
+      <Width>660</Width>
+      <Height>930</Height>
+    </MapInnerSize>
+    <MapInterval>15</MapInterval>
+  </Content>
+</Template>

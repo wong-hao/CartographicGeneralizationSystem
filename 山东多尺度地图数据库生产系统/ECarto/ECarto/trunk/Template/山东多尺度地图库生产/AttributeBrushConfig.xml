@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Option>
+  <AttributeBrush>
+    <ExlucdeFields>
+      <FN>smgiguid</FN>
+      <FN>smgiversion</FN>
+      <FN>smgidel</FN>
+      <FN>smgiopuser</FN>
+    </ExlucdeFields>
+    <FCS>
+      <FC>
+        <NAME>LRDL</NAME>
+        <Fields>
+          <FN>GB</FN>
+          <FN>RN</FN>
+          <FN>RN2</FN>
+          <FN>NAME</FN>
+          <FN>NAME2</FN>
+        </Fields>
+      </FC>
+      <FC>
+        <NAME>HYDL</NAME>
+        <Fields>
+          <FN>NAME</FN>
+        </Fields>
+      </FC>
+      <FC>
+        <NAME>HYDA</NAME>
+        <Fields></Fields>
+      </FC>
+      <FC>
+        <NAME>RESA</NAME>
+        <Fields></Fields>
+      </FC>
+      <FC>
+        <NAME>LRRL</NAME>
+        <Fields></Fields>
+      </FC>
+    </FCS>
+  </AttributeBrush>
+</Option>

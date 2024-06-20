@@ -1,0 +1,7 @@
+D:\ECarto\trunk\Release\bin\SMGI.Shell.exe
+D:\ECarto\trunk\Release\bin\SMGI.Shell.pdb
+D:\ECarto\trunk\code\SMGI.Shell\obj\x86\Release\SMGI.Shell.csprojResolveAssemblyReference.cache
+D:\ECarto\trunk\code\SMGI.Shell\obj\x86\Release\SMGI.Shell.MainForm.resources
+D:\ECarto\trunk\code\SMGI.Shell\obj\x86\Release\SMGI.Shell.csproj.GenerateResource.Cache
+D:\ECarto\trunk\code\SMGI.Shell\obj\x86\Release\SMGI.Shell.exe
+D:\ECarto\trunk\code\SMGI.Shell\obj\x86\Release\SMGI.Shell.pdb

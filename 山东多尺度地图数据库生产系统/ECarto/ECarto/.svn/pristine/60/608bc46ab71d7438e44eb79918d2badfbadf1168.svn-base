@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Lengend Note="不表示图例项">
+   <Item Name="水系面边线" FeatureClass="HYDATOLINE" >1</Item>
+   <Item Name="道路线" FeatureClass="LRDL" >15,16,17,18</Item>
+   <Item Name="铁路线" FeatureClass="LRRL" >3</Item>
+   <Item Name="居民地点" FeatureClass="AGNP" >8</Item>
+   <Item Name="居民地面" FeatureClass="RESA" >2</Item>
+   <Item Name="水系面" FeatureClass="HYDA" >3,9</Item>
+   <Item Name="水系线" FeatureClass="HYDL" >3,6</Item>
+   <Item Name="水系附属设施线" FeatureClass="HFCL" >14,15,13,26</Item>
+   <Item Name="交通附属设施线上层路" FeatureClass="LFCL" >36,37,38,39,40,41,42,43,44,45,46,47,48,49,90,91,50,51,52,53,54,55</Item>
+   <Item Name="交通附属设施点" FeatureClass="LFCP" >2,3,7</Item>
+   <Layer Name="侧界" FeatureClass="CJL" ></Layer>
+</Lengend>

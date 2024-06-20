@@ -1,0 +1,9 @@
+D:\ECarto\trunk\Release\bin\ECartoCommandManager.exe
+D:\ECarto\trunk\Release\bin\ECartoCommandManager.pdb
+D:\ECarto\trunk\code\ECartoCommandManager\obj\x86\Release\ECartoCommandManager.CommandManager.resources
+D:\ECarto\trunk\code\ECartoCommandManager\obj\x86\Release\ECartoCommandManager.FormCaption.resources
+D:\ECarto\trunk\code\ECartoCommandManager\obj\x86\Release\ECartoCommandManager.FormCommand.resources
+D:\ECarto\trunk\code\ECartoCommandManager\obj\x86\Release\ECartoCommandManager.Properties.Resources.resources
+D:\ECarto\trunk\code\ECartoCommandManager\obj\x86\Release\ECartoCommandManager.csproj.GenerateResource.Cache
+D:\ECarto\trunk\code\ECartoCommandManager\obj\x86\Release\ECartoCommandManager.exe
+D:\ECarto\trunk\code\ECartoCommandManager\obj\x86\Release\ECartoCommandManager.pdb

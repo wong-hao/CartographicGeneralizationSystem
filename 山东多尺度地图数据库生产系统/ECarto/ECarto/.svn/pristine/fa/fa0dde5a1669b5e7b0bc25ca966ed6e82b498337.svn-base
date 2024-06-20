@@ -1,0 +1,26 @@
+﻿<Platform>
+  <BGImage>platform.Image.png</BGImage>
+  <Products>
+    <ProductInfo>
+      <Name>快速地图制图</Name>
+      <ImagePath>btn3.Image.jpg</ImagePath>
+      <Location>120,200</Location>
+      <Size>180,86</Size>
+      <Usable>True</Usable>
+    </ProductInfo>
+    <ProductInfo>
+      <Name>多尺度地图库生产</Name>
+      <Location>420,200</Location>
+      <Size>180,86</Size>
+      <ImagePath>btn7.Image.jpg</ImagePath>
+      <Usable>True</Usable>
+    </ProductInfo>
+    <ProductInfo>
+      <Name>基础地理信息数据库更新</Name>
+      <Location>720,200</Location>
+      <Size>180,86</Size>
+      <ImagePath>btn5.Image.jpg</ImagePath>
+      <Usable>True</Usable>
+    </ProductInfo>
+  </Products>
+</Platform>

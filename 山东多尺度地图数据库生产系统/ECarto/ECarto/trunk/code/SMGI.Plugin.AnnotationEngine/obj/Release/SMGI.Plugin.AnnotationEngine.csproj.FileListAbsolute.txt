@@ -1,0 +1,6 @@
+D:\ECarto\trunk\Release\Plugins\SMGI.Plugin.AnnotationEngine.dll
+D:\ECarto\trunk\Release\Plugins\SMGI.Plugin.AnnotationEngine.pdb
+D:\ECarto\trunk\code\SMGI.Plugin.AnnotationEngine\obj\Release\SMGI.Plugin.AnnotationEngine.AnnotationAttributeForm.resources
+D:\ECarto\trunk\code\SMGI.Plugin.AnnotationEngine\obj\Release\SMGI.Plugin.AnnotationEngine.csproj.GenerateResource.Cache
+D:\ECarto\trunk\code\SMGI.Plugin.AnnotationEngine\obj\Release\SMGI.Plugin.AnnotationEngine.dll
+D:\ECarto\trunk\code\SMGI.Plugin.AnnotationEngine\obj\Release\SMGI.Plugin.AnnotationEngine.pdb

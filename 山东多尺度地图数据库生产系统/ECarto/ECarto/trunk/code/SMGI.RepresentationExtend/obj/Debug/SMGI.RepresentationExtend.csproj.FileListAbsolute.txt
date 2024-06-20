@@ -1,0 +1,12 @@
+D:\ECarto\trunk\bin\SMGI.RepresentationExtend.dll
+D:\ECarto\trunk\bin\SMGI.RepresentationExtend.pdb
+D:\ECarto\trunk\bin\SMGI.RepresentationExtend.tlb
+D:\ECarto\trunk\code\SMGI.RepresentationExtend\obj\Debug\SMGI.RepresentationExtend.csprojResolveAssemblyReference.cache
+D:\ECarto\trunk\code\SMGI.RepresentationExtend\obj\Debug\SMGI.RepresentationExtend.dll
+D:\ECarto\trunk\code\SMGI.RepresentationExtend\obj\Debug\SMGI.RepresentationExtend.pdb
+D:\工作\ECarto\ECarto\trunk\bin\SMGI.RepresentationExtend.dll
+D:\工作\ECarto\ECarto\trunk\bin\SMGI.RepresentationExtend.pdb
+D:\工作\ECarto\ECarto\trunk\bin\SMGI.RepresentationExtend.tlb
+D:\工作\ECarto\ECarto\trunk\code\SMGI.RepresentationExtend\obj\Debug\SMGI.RepresentationExtend.csprojResolveAssemblyReference.cache
+D:\工作\ECarto\ECarto\trunk\code\SMGI.RepresentationExtend\obj\Debug\SMGI.RepresentationExtend.dll
+D:\工作\ECarto\ECarto\trunk\code\SMGI.RepresentationExtend\obj\Debug\SMGI.RepresentationExtend.pdb

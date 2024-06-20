@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DataTable>
+  <DataGroup ShareItemName="地面河流" ShareRuleID="5">
+    <DataRow>
+      <RuleID>2</RuleID>
+      <FclName>HYDL</FclName>
+      <LGNote>河流</LGNote>
+    </DataRow>
+    <DataRow>
+      <RuleID>2</RuleID>
+      <FclName>HYDA</FclName>
+      <LGNote>地面河流</LGNote>
+    </DataRow>
+  </DataGroup>
+  <DataGroup ShareItemName="沟渠" ShareRuleID="7">
+    <DataRow>
+      <RuleID>4,5</RuleID>
+      <FclName>HYDL</FclName>
+      <LGNote>干渠、支渠</LGNote>
+    </DataRow>
+    <DataRow>
+      <RuleID>3</RuleID>
+      <FclName>HYDA</FclName>
+      <LGNote>渠</LGNote>
+    </DataRow>
+  </DataGroup>
+  <DataGroup ShareItemName="湖泊" ShareRuleID="44">
+    <DataRow>
+      <RuleID>4</RuleID>
+      <FclName>HYDA</FclName>
+      <LGNote>湖泊</LGNote>
+    </DataRow>
+  </DataGroup>
+  <DataGroup ShareItemName="池塘" ShareRuleID="9">
+    <DataRow>
+      <RuleID>5</RuleID>
+      <FclName>HYDA</FclName>
+      <LGNote>池塘</LGNote>
+    </DataRow>
+  </DataGroup>
+  <DataGroup ShareItemName="水库" ShareRuleID="10">
+    <DataRow>
+      <RuleID>6</RuleID>
+      <FclName>HYDA</FclName>
+      <LGNote>水库</LGNote>
+    </DataRow>
+  </DataGroup>
+  <DataGroup ShareItemName="河、湖岛" ShareRuleID="28">
+    <DataRow>
+      <RuleID>8</RuleID>
+      <FclName>HYDA</FclName>
+      <LGNote>河、湖岛</LGNote>
+    </DataRow>
+  </DataGroup>
+  <DataGroup Type="通用" ShareItemName="桥梁" ShareRuleID="3">
+    <DataRow>
+      <RuleID>2,4,5,7,9,11,13,15,17,19,21,23,25,27</RuleID>
+      <FclName>LFCL</FclName>
+      <LGNote>桥梁</LGNote>
+    </DataRow>
+  </DataGroup>
+  <DataGroup Type="通用" ShareItemName="隧道" ShareRuleID="4">
+    <DataRow>
+      <RuleID>3,6,8,10,12,14,16,18,20,22,24,26,28</RuleID>
+      <FclName>LFCL</FclName>
+      <LGNote>隧道</LGNote>
+    </DataRow>
+  </DataGroup>
+  <DataGroup Type="通用" ShareItemName="匝道" ShareRuleID="25">
+    <DataRow>
+      <RuleID>28</RuleID>
+      <FclName>LRAL</FclName>
+      <LGNote>匝道</LGNote>
+    </DataRow>
+  </DataGroup>
+</DataTable>

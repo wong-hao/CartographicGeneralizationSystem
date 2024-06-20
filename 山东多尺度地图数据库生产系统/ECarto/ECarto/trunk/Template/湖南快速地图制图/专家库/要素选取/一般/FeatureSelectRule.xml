@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Template>
+  <Content>
+    <HYDL note="单线河">
+      <Item minScale ="1000001" maxScale="1500000">1</Item>
+      <Item minScale ="1000001" maxScale="1500000">2</Item>
+      <Item minScale ="1000001" maxScale="1500000">3</Item>
+      <Item minScale ="1000001" maxScale="1500000">4</Item>
+      <Item minScale ="1000001" maxScale="1500000">5</Item>
+      <Item minScale ="1000001" maxScale="1500000">6</Item>
+      <Item minScale ="1000001" maxScale="1500000">7</Item>
+      <Item minScale ="700001" maxScale="1000000">8</Item>
+      <Item minScale ="500001" maxScale="700000">9</Item>
+      <Item minScale ="350001" maxScale="500000">10</Item>
+      <Item minScale ="250001" maxScale="350000">11</Item>
+      <Item minScale ="150001" maxScale="250000">12</Item>
+      <Item minScale ="100001" maxScale="150000">13</Item>
+      <Item minScale ="70001" maxScale="100000">14</Item>
+      <Item minScale ="50001" maxScale="70000">15</Item>
+      <Item minScale ="35001" maxScale="50000">16</Item>
+    </HYDL>
+    <HYDA note="水系面">
+    </HYDA>
+    <LRDL note="道路">
+      <Item minScale ="1000001" maxScale="1500000">1</Item>
+      <Item minScale ="1000001" maxScale="1500000">2</Item>
+      <Item minScale ="1000001" maxScale="1500000">3</Item>
+      <Item minScale ="1000001" maxScale="1500000">4</Item>
+      <Item minScale ="700001" maxScale="1000000">5</Item>
+      <Item minScale ="600001" maxScale="700000">6</Item>
+      <Item minScale ="400001" maxScale="600000">7</Item>
+      <Item minScale ="300001" maxScale="400000">8</Item>
+      <Item minScale ="200001" maxScale="300000">9</Item>
+      <Item minScale ="120001" maxScale="200000">10</Item>
+      <Item minScale ="70001" maxScale="120000">11</Item>
+      <Item minScale ="35001" maxScale="70000">12</Item>
+    </LRDL>
+    <AGNPPriority note="居民地点优先级">
+      <Item minScale ="1000001" maxScale="1500000">1</Item>
+      <Item minScale ="1000001" maxScale="1500000">2</Item>
+      <Item minScale ="1000001" maxScale="1500000">3</Item>
+      <Item minScale ="1000001" maxScale="1500000">4</Item>
+      <Item minScale ="1000001" maxScale="1500000">5</Item>
+      <Item minScale ="1000001" maxScale="1500000">6</Item>
+      <Item minScale ="1000001" maxScale="1500000">7</Item>
+      <Item minScale ="1000001" maxScale="1500000">8</Item>
+      <Item minScale ="700001" maxScale="1000000">9</Item>
+      <Item minScale ="500001" maxScale="700000">10</Item>
+      <Item minScale ="350001" maxScale="500000">11</Item>
+      <Item minScale ="250001" maxScale="350000">12</Item>
+      <Item minScale ="150001" maxScale="250000">13</Item>
+      <Item minScale ="100001" maxScale="150000">14</Item>
+      <Item minScale ="70001" maxScale="100000">15</Item>
+      <Item minScale ="50001" maxScale="70000">16</Item>
+      <Item minScale ="35001" maxScale="50000">17</Item>
+    </AGNPPriority>
+    <AGNPClass note="居民地点类型">
+      <Item  sql="class='AB'">省驻地</Item>
+      <Item  sql="class='AC'">自治州驻地</Item>
+      <Item  sql="class='AD'">市驻地</Item>
+      <Item  sql="class='AE' OR class='AF'">县驻地</Item>
+      <Item  sql="class='AH' OR class='AI' OR class='AJ'">乡镇驻地</Item>
+      <Item  sql="class='AK' OR class='AL'">村驻地</Item>
+      <Item  sql="class='BB'">自然村</Item>
+      <Item  sql="class='BA'">小区名</Item>
+    </AGNPClass>
+    <RESA note="街区面">
+      <Item sql="CLASS1='1'" cityroadClass = "1">省会城市街区</Item>
+      <Item sql="CLASS1 in ('1','2')" cityroadClass = "2">设区市级街区</Item>
+      <Item sql="CLASS1 in ('1','2','3')" cityroadClass = "3">区县级街区</Item>
+      <Item sql="CLASS1 in ('1','2','3','4')" cityroadClass = "4">乡镇级街区</Item>
+      <Item sql="" cityroadClass = "5">集镇及其他</Item>
+    </RESA>
+    <BOUL note="境界线">
+      <Item gb="630201" >省级</Item>
+      <Item gb="640201" >市级</Item>
+      <Item gb="650201" >区县级</Item>
+      <Item gb="660201" >乡镇级</Item>
+    </BOUL>
+    <BOUAAnno note="表面注记" ProvPac="430000">
+      <Item fcName="BOUA2" >省级</Item>
+      <Item fcName="BOUA4" >市级</Item>
+      <Item fcName="BOUA5" >区县级</Item>
+      <Item fcName="BOUA6" >乡镇级</Item>
+    </BOUAAnno>
+  </Content>
+  <Scheme riverGroup = "true" roadGroup="true" resaGroup = "true" agnpGroup = "true" poiGroup = "false" vegaGroup =  "false" boulGroup = "true" bouaAnnoGroup = "true">
+    <Type MapLevel="自定义">
+      <HYDL note="单线河" mainGrade="12" adjGrade="8"></HYDL>
+      <HYDA note="水系面" mainArea ="0" adjArea="16"></HYDA>
+      <LRDL note="道路" mainGrade="9" adjGrade="6"></LRDL>
+      <MainAGNPPriority note="主区居民地点优先级" priority="12"></MainAGNPPriority>
+      <AdjAGNPPriority note="邻区居民地点优先级" priority="8"></AdjAGNPPriority>
+      <MainAGNPClass note="主区居民地点">
+        <Item slected="true">省驻地</Item>
+        <Item slected="true">自治州驻地</Item>
+        <Item slected="true">市驻地</Item>
+        <Item slected="true">县驻地</Item>
+        <Item slected="true">乡镇驻地</Item>
+        <Item slected="true">村驻地</Item>
+        <Item slected="false">自然村</Item>
+        <Item slected="false">小区名</Item>
+      </MainAGNPClass>
+      <AdjAGNPClass note="邻区居民地点">
+        <Item slected="true">省驻地</Item>
+        <Item slected="true">自治州驻地</Item>
+        <Item slected="true">市驻地</Item>
+        <Item slected="true">县驻地</Item>
+        <Item slected="false">乡镇驻地</Item>
+        <Item slected="false">村驻地</Item>
+        <Item slected="false">自然村</Item>
+        <Item slected="false">小区名</Item>
+      </AdjAGNPClass>
+      <RESA note="街区面" mainRegion ="乡镇级街区" adjRegion ="区县级街区"></RESA>
+      <BOUL note="境界线" mainRegion ="乡镇级" adjRegion ="区县级"></BOUL>
+      <BOUAAnno note="表面注记" mainRegion ="乡镇级" inProvAdjRegion ="区县级" outProvAdjRegion="省级"></BOUAAnno>
+    </Type>
+    <Type MapLevel="省图">
+      <HYDL note="单线河" mainGrade="8" adjGrade="4"></HYDL>
+      <HYDA note="水系面" mainArea ="0" adjArea="36"></HYDA>
+      <LRDL note="道路" mainGrade="5" adjGrade="3"></LRDL>
+      <MainAGNPPriority note="主区居民地点优先级" priority="9"></MainAGNPPriority>
+      <AdjAGNPPriority note="邻区居民地点优先级" priority="5"></AdjAGNPPriority>
+      <MainAGNPClass note="主区居民地点">
+        <Item slected="true">省驻地</Item>
+        <Item slected="true">自治州驻地</Item>
+        <Item slected="true">市驻地</Item>
+        <Item slected="true">县驻地</Item>
+        <Item slected="true">乡镇驻地</Item>
+        <Item slected="false">村驻地</Item>
+        <Item slected="false">自然村</Item>
+        <Item slected="false">小区名</Item>
+      </MainAGNPClass>
+      <AdjAGNPClass note="邻区居民地点">
+        <Item slected="true">省驻地</Item>
+        <Item slected="true">自治州驻地</Item>
+        <Item slected="true">市驻地</Item>
+        <Item slected="true">县驻地</Item>
+        <Item slected="false">乡镇驻地</Item>
+        <Item slected="false">村驻地</Item>
+        <Item slected="false">自然村</Item>
+        <Item slected="false">小区名</Item>
+      </AdjAGNPClass>
+      <RESA note="街区面" mainRegion ="设区市级街区" adjRegion ="省会城市街区"></RESA>
+      <BOUL note="境界线" mainRegion ="市级" adjRegion ="市级"></BOUL>
+      <BOUAAnno note="表面注记" mainRegion ="市级" inProvAdjRegion ="市级" outProvAdjRegion="省级"></BOUAAnno>
+    </Type>
+    <Type MapLevel="市图">
+      <HYDL note="单线河" mainGrade="10" adjGrade="6"></HYDL>
+      <HYDA note="水系面" mainArea ="0" adjArea="25"></HYDA>
+      <LRDL note="道路" mainGrade="7" adjGrade="4"></LRDL>
+      <MainAGNPPriority note="主区居民地点优先级" priority="12"></MainAGNPPriority>
+      <AdjAGNPPriority note="邻区居民地点优先级" priority="8"></AdjAGNPPriority>
+      <MainAGNPClass note="主区居民地点">
+        <Item slected="true">省驻地</Item>
+        <Item slected="true">自治州驻地</Item>
+        <Item slected="true">市驻地</Item>
+        <Item slected="true">县驻地</Item>
+        <Item slected="true">乡镇驻地</Item>
+        <Item slected="true">村驻地</Item>
+        <Item slected="false">自然村</Item>
+        <Item slected="false">小区名</Item>
+      </MainAGNPClass>
+      <AdjAGNPClass note="邻区居民地点">
+        <Item slected="true">省驻地</Item>
+        <Item slected="true">自治州驻地</Item>
+        <Item slected="true">市驻地</Item>
+        <Item slected="true">县驻地</Item>
+        <Item slected="false">乡镇驻地</Item>
+        <Item slected="false">村驻地</Item>
+        <Item slected="false">自然村</Item>
+        <Item slected="false">小区名</Item>
+      </AdjAGNPClass>
+      <RESA note="街区面" mainRegion ="区县级街区" adjRegion ="设区市级街区"></RESA>
+      <BOUL note="境界线" mainRegion ="区县级" adjRegion ="市级"></BOUL>
+      <BOUAAnno note="表面注记" mainRegion ="区县级" inProvAdjRegion ="市级" outProvAdjRegion="省级"></BOUAAnno>
+    </Type>
+    <Type MapLevel="县图">
+      <HYDL note="单线河" mainGrade="12" adjGrade="8"></HYDL>
+      <HYDA note="水系面" mainArea ="0" adjArea="16"></HYDA>
+      <LRDL note="道路" mainGrade="9" adjGrade="6"></LRDL>
+      <MainAGNPPriority note="主区居民地点优先级" priority="14"></MainAGNPPriority>
+      <AdjAGNPPriority note="邻区居民地点优先级" priority="10"></AdjAGNPPriority>
+      <MainAGNPClass note="主区居民地点">
+        <Item slected="true">省驻地</Item>
+        <Item slected="true">自治州驻地</Item>
+        <Item slected="true">市驻地</Item>
+        <Item slected="true">县驻地</Item>
+        <Item slected="true">乡镇驻地</Item>
+        <Item slected="true">村驻地</Item>
+        <Item slected="true">自然村</Item>
+        <Item slected="true">小区名</Item>
+      </MainAGNPClass>
+      <AdjAGNPClass note="邻区居民地点">
+        <Item slected="true">省驻地</Item>
+        <Item slected="true">自治州驻地</Item>
+        <Item slected="true">市驻地</Item>
+        <Item slected="true">县驻地</Item>
+        <Item slected="true">乡镇驻地</Item>
+        <Item slected="false">村驻地</Item>
+        <Item slected="false">自然村</Item>
+        <Item slected="false">小区名</Item>
+      </AdjAGNPClass>
+      <RESA note="街区面" mainRegion ="乡镇级街区" adjRegion ="区县级街区"></RESA>
+      <BOUL note="境界线" mainRegion ="乡镇级" adjRegion ="区县级"></BOUL>
+      <BOUAAnno note="表面注记" mainRegion ="乡镇级" inProvAdjRegion ="区县级" outProvAdjRegion="省级"></BOUAAnno>
+    </Type>
+  </Scheme>
+</Template>

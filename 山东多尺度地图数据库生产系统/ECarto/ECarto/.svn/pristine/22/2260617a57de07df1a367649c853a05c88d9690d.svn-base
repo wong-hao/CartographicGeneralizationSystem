@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Template>
+  <Content>
+    <Item name="地图投影模板">HN_GCS2000_Lambert_Conformal_Conic.prj</Item>
+  </Content>
+</Template>

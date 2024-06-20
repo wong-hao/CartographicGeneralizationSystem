@@ -1,0 +1,6 @@
+D:\ECarto\trunk\Release\bin\基础地理信息数据库更新协同作业系统.exe
+D:\ECarto\trunk\Release\bin\基础地理信息数据库更新协同作业系统.pdb
+D:\ECarto\trunk\code\ECartoGeoDatabaseUpdate\obj\x86\Release\eCarto.Properties.Resources.resources
+D:\ECarto\trunk\code\ECartoGeoDatabaseUpdate\obj\x86\Release\ECartoGeoDatabaseUpdate.csproj.GenerateResource.Cache
+D:\ECarto\trunk\code\ECartoGeoDatabaseUpdate\obj\x86\Release\基础地理信息数据库更新协同作业系统.exe
+D:\ECarto\trunk\code\ECartoGeoDatabaseUpdate\obj\x86\Release\基础地理信息数据库更新协同作业系统.pdb

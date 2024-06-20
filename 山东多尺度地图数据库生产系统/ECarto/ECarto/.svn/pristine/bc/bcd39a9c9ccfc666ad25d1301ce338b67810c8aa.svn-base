@@ -1,0 +1,11 @@
+﻿<Template>
+<Caption>地理信息数据库更新协同作业系统</Caption>
+<ClassName>基础地理信息数据库更新</ClassName>
+<CommandLayout>Commands.xml</CommandLayout>
+<Content>
+<DataUpdate5W>true</DataUpdate5W>
+<DataTemplate>DataTemple.gdb</DataTemplate>
+<SkinStyle>Office 2010 Blue</SkinStyle>
+<SatrtImage>启动图片.png</SatrtImage>
+</Content>
+</Template>

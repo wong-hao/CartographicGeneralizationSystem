@@ -1,0 +1,14 @@
+D:\ECarto\trunk\Plugins\SMGI.Plugin.AnnotationEngine.dll
+D:\ECarto\trunk\Plugins\SMGI.Plugin.AnnotationEngine.pdb
+D:\ECarto\trunk\code\SMGI.Plugin.AnnotationEngine\obj\Debug\SMGI.Plugin.AnnotationEngine.csprojResolveAssemblyReference.cache
+D:\ECarto\trunk\code\SMGI.Plugin.AnnotationEngine\obj\Debug\SMGI.Plugin.AnnotationEngine.AnnotationAttributeForm.resources
+D:\ECarto\trunk\code\SMGI.Plugin.AnnotationEngine\obj\Debug\SMGI.Plugin.AnnotationEngine.csproj.GenerateResource.Cache
+D:\ECarto\trunk\code\SMGI.Plugin.AnnotationEngine\obj\Debug\SMGI.Plugin.AnnotationEngine.dll
+D:\ECarto\trunk\code\SMGI.Plugin.AnnotationEngine\obj\Debug\SMGI.Plugin.AnnotationEngine.pdb
+D:\工作\ECarto\ECarto\trunk\Plugins\SMGI.Plugin.AnnotationEngine.dll
+D:\工作\ECarto\ECarto\trunk\Plugins\SMGI.Plugin.AnnotationEngine.pdb
+D:\工作\ECarto\ECarto\trunk\code\SMGI.Plugin.AnnotationEngine\obj\Debug\SMGI.Plugin.AnnotationEngine.csprojResolveAssemblyReference.cache
+D:\工作\ECarto\ECarto\trunk\code\SMGI.Plugin.AnnotationEngine\obj\Debug\SMGI.Plugin.AnnotationEngine.AnnotationAttributeForm.resources
+D:\工作\ECarto\ECarto\trunk\code\SMGI.Plugin.AnnotationEngine\obj\Debug\SMGI.Plugin.AnnotationEngine.csproj.GenerateResource.Cache
+D:\工作\ECarto\ECarto\trunk\code\SMGI.Plugin.AnnotationEngine\obj\Debug\SMGI.Plugin.AnnotationEngine.dll
+D:\工作\ECarto\ECarto\trunk\code\SMGI.Plugin.AnnotationEngine\obj\Debug\SMGI.Plugin.AnnotationEngine.pdb

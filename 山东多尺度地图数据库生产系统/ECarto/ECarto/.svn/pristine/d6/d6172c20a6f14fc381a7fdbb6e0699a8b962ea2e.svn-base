@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{79440E01-A02E-48D6-BE53-39996AC4BADF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SMGI.Plugin.GeneralEdit</RootNamespace>
+    <AssemblyName>SMGI.Plugin.GeneralEdit</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Release\Plugins\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v13.1.Core, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v13.1, Version=13.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.ADF, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataManagementTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.EditingTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Editor, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttributeBrushTool.cs" />
+    <Compile Include="AutoConnectionPolyline.cs" />
+    <Compile Include="AutoConnectionPolylineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AutoConnectionPolylineForm.Designer.cs">
+      <DependentUpon>AutoConnectionPolylineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BranchMapHelper.cs" />
+    <Compile Include="CenterLineFactory.cs" />
+    <Compile Include="CenterLineHelper.cs" />
+    <Compile Include="ConverseLineDirection.cs" />
+    <Compile Include="CreateCenterLine.cs" />
+    <Compile Include="CurrentLayerCommand.cs" />
+    <Compile Include="CustPolygonCommands.cs" />
+    <Compile Include="CutBaseOnFea.cs" />
+    <Compile Include="EditingCommands.cs" />
+    <Compile Include="EditOptionCmd.cs" />
+    <Compile Include="EditOptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditOptionForm.designer.cs">
+      <DependentUpon>EditOptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditSelector.cs" />
+    <Compile Include="Extend.cs" />
+    <Compile Include="FeatureCopyTransTool.cs" />
+    <Compile Include="FeatureEditTool.cs" />
+    <Compile Include="FeatureParallelCopy.cs" />
+    <Compile Include="FeatureParallelCopyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeatureParallelCopyForm.Designer.cs">
+      <DependentUpon>FeatureParallelCopyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeatureParallelMoveTool.cs" />
+    <Compile Include="FeatureTopoExec.cs" />
+    <Compile Include="FeatureTransStepForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeatureTransStepForm.Designer.cs">
+      <DependentUpon>FeatureTransStepForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralizeTool.cs" />
+    <Compile Include="LayerSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LayerSelectForm.designer.cs">
+      <DependentUpon>LayerSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveOverlapNodeCmd.cs" />
+    <Compile Include="ReshapePolylineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReshapePolylineForm.Designer.cs">
+      <DependentUpon>ReshapePolylineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelectionDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelectionDo.Designer.cs">
+      <DependentUpon>FrmSelectionDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralizeCommand.cs" />
+    <Compile Include="GeneralizeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralizeForm.Designer.cs">
+      <DependentUpon>GeneralizeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterAction.Designer.cs">
+      <DependentUpon>InterAction.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LayerFeatureTopo.cs" />
+    <Compile Include="LayerFeatureTopoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LayerFeatureTopoForm.Designer.cs">
+      <DependentUpon>LayerFeatureTopoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LineBreak.cs" />
+    <Compile Include="FeatureMergeTool.cs" />
+    <Compile Include="LineCutPolygon.cs" />
+    <Compile Include="Lineextendedit.cs" />
+    <Compile Include="LineCutCopy.cs" />
+    <Compile Include="MapRotateTool.cs" />
+    <Compile Include="MultiPointMove.cs" />
+    <Compile Include="MultiPointMoveFormm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiPointMoveFormm.Designer.cs">
+      <DependentUpon>MultiPointMoveFormm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuildingConvert.cs" />
+    <Compile Include="Pinyin.cs" />
+    <Compile Include="PinyinCheck.cs" />
+    <Compile Include="PolygonCutPolygonTool.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReShapePolygon.cs" />
+    <Compile Include="ReshapePolylineNotRelated.cs" />
+    <Compile Include="SmoothCommand.cs" />
+    <Compile Include="SmoothTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SnapMove.cs" />
+    <Compile Include="ReShapePolygons.cs" />
+    <Compile Include="ReshapePolyline.cs" />
+    <Compile Include="Resource.Designer.cs">
+      <DependentUpon>Resource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Rotate.cs" />
+    <Compile Include="SeniorReshapePolygonsTool.cs" />
+    <Compile Include="FeatureSplitTool.cs" />
+    <Compile Include="MultiToSingle.cs" />
+    <Compile Include="ReShapePolygonsWithFreeHand.cs" />
+    <Compile Include="SelectorSimpleTool.cs" />
+    <Compile Include="FeatureCutTool.cs" />
+    <Compile Include="ReShapeByOther.cs" />
+    <Compile Include="ReShapeAllTool.cs" />
+    <Compile Include="ReshapePolylineRepData.cs" />
+    <Compile Include="ReshapePolylineNotRelatedRepData.cs" />
+    <Compile Include="CreatePolygonByFreeAreaTool.cs" />
+    <Compile Include="SynchornLineBreak.cs" />
+    <Compile Include="SynchornMultiToSingle.cs" />
+    <Compile Include="SynchornPolygonCut.cs" />
+    <Compile Include="SynchronReShapePolygons.cs" />
+    <Compile Include="SynchronReshapePolylineNotRelated.cs" />
+    <Compile Include="FeatureParallelMove.cs" />
+    <Compile Include="FeatureParallelCopyToolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeatureParallelCopyToolForm.Designer.cs">
+      <DependentUpon>FeatureParallelCopyToolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeatureCopyTransToolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeatureCopyTransToolForm.Designer.cs">
+      <DependentUpon>FeatureCopyTransToolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LineAnglePro.cs" />
+    <Compile Include="VegaGbUpdate.cs" />
+    <Compile Include="VegaGbUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VegaGbUpdateForm.Designer.cs">
+      <DependentUpon>VegaGbUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraceLineReShapePolygons.cs" />
+    <Compile Include="TraceLineFeatureCreateTool.cs" />
+    <Compile Include="VertexDeleteTool.cs" />
+    <Compile Include="VertexInsertTool.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AutoConnectionPolylineForm.resx">
+      <DependentUpon>AutoConnectionPolylineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditOptionForm.resx">
+      <DependentUpon>EditOptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeatureParallelCopyForm.resx">
+      <DependentUpon>FeatureParallelCopyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeatureTransStepForm.resx">
+      <DependentUpon>FeatureTransStepForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSelectionDo.resx">
+      <DependentUpon>FrmSelectionDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralizeForm.resx">
+      <DependentUpon>GeneralizeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterAction.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InterAction.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayerFeatureTopoForm.resx">
+      <DependentUpon>LayerFeatureTopoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayerSelectForm.resx">
+      <DependentUpon>LayerSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiPointMoveFormm.resx">
+      <DependentUpon>MultiPointMoveFormm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReshapePolylineForm.resx">
+      <DependentUpon>ReshapePolylineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="修线.cur" />
+    <EmbeddedResource Include="FeatureParallelCopyToolForm.resx">
+      <DependentUpon>FeatureParallelCopyToolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeatureCopyTransToolForm.resx">
+      <DependentUpon>FeatureCopyTransToolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VegaGbUpdateForm.resx">
+      <DependentUpon>VegaGbUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Move.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Move.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="pen.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Brush.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SMGI.Common\SMGI.Common.csproj">
+      <Project>{6CF02365-2D92-427B-92DB-1C55DAEEB1BF}</Project>
+      <Name>SMGI.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VertexAdd.cur" />
+    <EmbeddedResource Include="VertexDel.cur" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
